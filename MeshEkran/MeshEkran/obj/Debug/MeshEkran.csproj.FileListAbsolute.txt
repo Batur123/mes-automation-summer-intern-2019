@@ -1,0 +1,15 @@
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe.config
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.pdb
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csprojAssemblyReference.cache
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Properties.Resources.resources
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.GenerateResource.cache
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CoreCompileInputs.cache
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.exe
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.pdb
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MasDLL.dll
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Admin.resources
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_SecimEkran.resources
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CopyComplete
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Admin_AnaMenu.resources
+C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Operator.resources
