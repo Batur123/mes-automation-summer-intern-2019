@@ -30,7 +30,7 @@ namespace MeshEkran
         }
         #endregion
 
-        #region OperatorListesiTab
+        #region OperatorListesiTabGrid
         private void OperatorGrid()
         {
            
@@ -49,29 +49,29 @@ namespace MeshEkran
                     var commandBuilder = new SqlCommandBuilder(dataAdapter);
                     var ds = new DataSet();
                     dataAdapter.Fill(ds);
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.DataSource = ds.Tables[0];
+                    OperatorlerGrid.ReadOnly = true;
+                    OperatorlerGrid.DataSource = ds.Tables[0];
 
-                    dataGridView1.RowHeadersVisible = false;
-                    dataGridView1.Columns[0].HeaderCell.Value = "Operatör ID";
-                    dataGridView1.Columns[1].HeaderCell.Value = "Ad";
-                    dataGridView1.Columns[2].HeaderCell.Value = "Soyad";
-                    dataGridView1.Columns[3].HeaderCell.Value = "TC Kimlik NO";
-                    dataGridView1.Columns[4].HeaderCell.Value = "Doğum Tarihi";
-                    dataGridView1.Columns[5].HeaderCell.Value = "Sicil Numarası";
-                    dataGridView1.Columns[6].HeaderCell.Value = "İşe Başlangıç Tarihi";
-                    dataGridView1.Columns[7].HeaderCell.Value = "İşten Çıkış Tarihi";
-                    dataGridView1.Columns[8].HeaderCell.Value = "Durum-Aktif\\Pasif";
+                    OperatorlerGrid.RowHeadersVisible = false;
+                    OperatorlerGrid.Columns[0].HeaderCell.Value = "Operatör ID";
+                    OperatorlerGrid.Columns[1].HeaderCell.Value = "Ad";
+                    OperatorlerGrid.Columns[2].HeaderCell.Value = "Soyad";
+                    OperatorlerGrid.Columns[3].HeaderCell.Value = "TC Kimlik NO";
+                    OperatorlerGrid.Columns[4].HeaderCell.Value = "Doğum Tarihi";
+                    OperatorlerGrid.Columns[5].HeaderCell.Value = "Sicil Numarası";
+                    OperatorlerGrid.Columns[6].HeaderCell.Value = "İşe Başlangıç Tarihi";
+                    OperatorlerGrid.Columns[7].HeaderCell.Value = "İşten Çıkış Tarihi";
+                    OperatorlerGrid.Columns[8].HeaderCell.Value = "Durum-Aktif\\Pasif";
 
-                    dataGridView1.Columns[6].Width = 150;
-                    dataGridView1.Columns[7].Width = 150;
-                    dataGridView1.Columns[0].Width = 100;
+                    OperatorlerGrid.Columns[6].Width = 150;
+                    OperatorlerGrid.Columns[7].Width = 150;
+                    OperatorlerGrid.Columns[0].Width = 100;
                     // dataGridView1.Columns[0].Width = 300;
                 }
             }
             catch (Exception msg)
             {
-                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız.");
+                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
             }
 
 
@@ -115,7 +115,7 @@ namespace MeshEkran
             }
             catch (Exception msg)
             {
-                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız.");
+                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
             }
 
 
@@ -156,12 +156,12 @@ namespace MeshEkran
             }
             catch (Exception msg)
             {
-                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız.");
+                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
             }
         }
         #endregion
 
-        #region UrunlerListesiGrid
+        #region UrunlerListesiTabGrid
         private void UrunlerListesiGrid()
         {
 
@@ -177,7 +177,7 @@ namespace MeshEkran
                     var commandBuilder = new SqlCommandBuilder(dataAdapter);
                     var ds = new DataSet();
                     dataAdapter.Fill(ds);
-                    UrunlerGrid.ReadOnly = true;
+                    UrunlerGrid.ReadOnly = false;
                     UrunlerGrid.DataSource = ds.Tables[0];
 
                     UrunlerGrid.RowHeadersVisible = false;
@@ -199,7 +199,8 @@ namespace MeshEkran
             }
             catch (Exception msg)
             {
-                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız.");
+                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
+                
             }
         }
         #endregion
@@ -214,8 +215,10 @@ namespace MeshEkran
         #region BirGeriFormaDonmeEventi
         private void GeriDonButon_Click(object sender, EventArgs e)
         {
-            Giris_Admin ac = new Giris_Admin();
-            ac.StartPosition = FormStartPosition.CenterScreen;
+            Giris_Admin ac = new Giris_Admin
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
             ac.Show();
             this.Hide();
         }
@@ -265,12 +268,13 @@ namespace MeshEkran
                 {
 
                     MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
-                    MasDLL.Rapor giris = new MasDLL.Rapor();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        MakineAdi = MakineAdText.Text,
+                        MakineKodu = MakineKoduText.Text,
+                        OperasyonID = Convert.ToInt32(OperasyonIDText.Text)
+                    };
 
-                    giris.MakineAdi = MakineAdText.Text;
-                    giris.MakineKodu = MakineKoduText.Text;
-                    giris.OperasyonID = Convert.ToInt32(OperasyonIDText.Text);
-                   
 
                     if (islem.MakineEkleme(giris))
                     {
@@ -297,16 +301,23 @@ namespace MeshEkran
         #region MakineSilmeButonEvent
         private void MakineSilmeBtn_Click(object sender, EventArgs e)
         {
+         
             MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
             MasDLL.Rapor giris = new MasDLL.Rapor();
 
-            if(MakineIDBox.Text == "")
+            textBox16.Text = MeshEkran.Classlar.SQLIslemleri.PSoperasyonid;
+            textBox17.Text = MeshEkran.Classlar.SQLIslemleri.PSkodu;
+            textBox18.Text = MeshEkran.Classlar.SQLIslemleri.PSid;
+
+            if (MakineIDBox.Text == "")
             {
                 MessageBox.Show("Boş alan bırakmayınız.");
             }
             else
             {
                 giris.MakineID = Convert.ToInt32(MakineIDBox.Text);
+
+
 
                 if (islem.MakineSilme(giris))
                 {
@@ -380,5 +391,242 @@ namespace MeshEkran
             }
         }
         #endregion
+
+        #region OperatorlerGrid CellClick Eventi
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.OperatorlerGrid.Rows[e.RowIndex];
+                label2.Text = row.Cells[0].Value.ToString();
+                SOperatorIDBox.Text = row.Cells[0].Value.ToString();
+                EAdBox.Text = row.Cells[1].Value.ToString();
+                ESoyadBox.Text = row.Cells[2].Value.ToString();
+                DogumDateTimeBox.Text = row.Cells[4].Value.ToString();
+                ESicilNoBox.Text = row.Cells[5].Value.ToString();
+                EDurumBox.Text = row.Cells[8].Value.ToString();
+                IstenCikisDateTimeBox.Text = row.Cells[6].Value.ToString();
+            }
+        }
+        #endregion
+
+        #region OperatorEklemeButonEvent
+        private void OperatorEklemeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (EAdBox.Text == "" && ESoyadBox.Text == "" && DogumDateTimeBox.Text == "" && ESicilNoBox.Text == "" && EDurumBox.Text == "" && isgirisdatetimebox.Text == "")
+                {
+                    MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                }
+                else
+                {
+
+                    MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        MakineAdi = MakineAdText.Text,
+                        MakineKodu = MakineKoduText.Text,
+                        OperasyonID = Convert.ToInt32(OperasyonIDText.Text)
+                    };
+
+
+                    if (islem.MakineEkleme(giris))
+                    {
+                        MessageBox.Show("Makine ekleme işlemi başarıyla tamamlandı.");
+                        MakinelerGrid();
+                        OperasyonlarGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu Makine koduna ait bir makine zaten mevcuttur. Ekleme işlemi yapılamadı.");
+                    }
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+        #endregion
+
+        #region OperatorSilButonEvent
+        private void OperatorSilBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (SOperatorIDBox.Text == "")
+                {
+                    MessageBox.Show("Lütfen Operator ID isimli kutucuğu boş bırakmayınız. Aksi takdirde silme işlemi yapamayacaksınız.");
+                }
+                else
+                {
+
+                    MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                    KullaniciDLL.Operator giris = new KullaniciDLL.Operator
+                    {
+                        OperatorID = Convert.ToInt32(label2.Text)
+                    };
+
+
+
+                    if (islem.OperatorSilme(giris))
+                    {
+                        MessageBox.Show("Operatör silme işlemi başarıyla tammalandı.");
+                        OperatorGrid();
+                    }
+
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+        #endregion
+
+        #region OperatorGuncelleButonEvent
+        private void OperatorGuncelleBtn_Click(object sender, EventArgs e)
+        {
+           
+
+           
+            try
+            {
+                if (durumcheck.Checked)
+                {
+                    EDurumBox.Enabled = false;
+                    EDurumBox.Text = "0";
+
+                    if (SOperatorIDBox.Text == "" && EAdBox.Text == "" && ESoyadBox.Text == "" && ESicilNoBox.Text == "" & EDurumBox.Text == "" & DogumDateTimeBox.Text == "")
+                    {
+                        MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                    }
+                    else
+                    {
+
+                        MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                        KullaniciDLL.Operator giris = new KullaniciDLL.Operator
+                        {
+                            DurumAP = 0,
+                            OperatorID = Convert.ToInt32(label2.Text),
+                            Isim = MakineKoduText.Text,
+                            Soyisim = ESoyadBox.Text,
+                            DogumTarihi = DogumDateTimeBox.Value,
+                            //DateTime.Parse(DogumDateTimeBox,System.Globalization.CultureInfo.InvariantCulture);
+                            SicilNO = ESicilNoBox.Text,
+                            IsCikisTarihi = DateTime.Now
+                        };
+
+
+
+                        if (islem.OperatorGuncelleme(giris))
+                        {
+                            MessageBox.Show("Operatör güncelleme işlemi başarıyla yapıldı.");
+                            OperatorGrid();
+                        }
+
+                    }
+                }
+                else
+                {
+                    if (SOperatorIDBox.Text == "" && EAdBox.Text == "" && ESoyadBox.Text == "" && ESicilNoBox.Text == "" & EDurumBox.Text == "" & DogumDateTimeBox.Text == "")
+                    {
+                        MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                    }
+                    else
+                    {
+
+                        MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                        KullaniciDLL.Operator giris = new KullaniciDLL.Operator
+                        {
+                            DurumAP = 1,
+                            OperatorID = Convert.ToInt32(label2.Text),
+                            Isim = MakineKoduText.Text,
+                            Soyisim = ESoyadBox.Text,
+                            DogumTarihi = DogumDateTimeBox.Value,
+                            SicilNO = ESicilNoBox.Text
+                        };
+
+
+
+                        if (islem.OperatorGuncelleme(giris))
+                        {
+                            MessageBox.Show("Operatör güncelleme işlemi başarıyla yapıldı.");
+                            OperatorGrid();
+                        }
+
+                    }
+                }
+                
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+
+
+        #endregion
+
+        private void TabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage17"]) //ekleme
+            {
+
+                TextBoxTemizle(this);
+                SOperatorIDBox.Enabled = false;
+                EAdBox.Enabled = true;
+                ESoyadBox.Enabled = true;
+                DogumDateTimeBox.Enabled = true;
+                ESicilNoBox.Enabled = true;
+                IstenCikisDateTimeBox.Enabled = false;
+                durumcheck.Enabled = false;               
+                EDurumBox.Enabled = true;
+                isgirisdatetimebox.Enabled = true;
+
+                EDurumBox.Text = "1";
+
+               
+
+            }
+            if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage18"]) //silme
+            {
+
+                TextBoxTemizle(this);
+                SOperatorIDBox.Enabled = true;
+                EAdBox.Enabled = false;
+                ESoyadBox.Enabled = false;
+                DogumDateTimeBox.Enabled = false;
+                ESicilNoBox.Enabled = false;
+                IstenCikisDateTimeBox.Enabled = false;
+                durumcheck.Enabled = false;
+                EDurumBox.Enabled = false;
+                isgirisdatetimebox.Enabled = false;
+
+            }
+            if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage16"]) //güncelleme
+            {
+
+                TextBoxTemizle(this);
+                SOperatorIDBox.Enabled = false;
+                EAdBox.Enabled = true;
+                ESoyadBox.Enabled = true;
+                DogumDateTimeBox.Enabled = true;
+                ESicilNoBox.Enabled = true;
+                IstenCikisDateTimeBox.Enabled = true;
+                durumcheck.Enabled = true;
+                EDurumBox.Enabled = true;
+                isgirisdatetimebox.Enabled = true;
+
+            }
+        }
     }
 }

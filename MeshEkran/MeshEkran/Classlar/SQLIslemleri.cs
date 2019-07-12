@@ -22,8 +22,10 @@ namespace MeshEkran.Classlar
             bool result = false;
             using (var connection = MeshEkran.Veritabani.Database.GetConnection())
             {
-                var command = new SqlCommand("SELECT * FROM MakinelerTablosu WHERE MakineKodu='" + degisken.MakineKodu + "'");
-                command.Connection = connection;
+                var command = new SqlCommand("SELECT * FROM MakinelerTablosu WHERE MakineKodu='" + degisken.MakineKodu + "'")
+                {
+                    Connection = connection
+                };
                 connection.Open();
                 using (var reader = command.ExecuteReader())
                 {
@@ -97,10 +99,10 @@ namespace MeshEkran.Classlar
                     string kodu = dr["MakineKodu"].ToString();
 
                     //////////////////////////
-                    string PSid = dr["MakineID"].ToString();
-                    string PSadi = dr["MakineAdi"].ToString();
-                    string PSkodu = dr["MakineKodu"].ToString();
-                    string PSoperasyonid = dr["OperasyonID"].ToString();
+                     PSid = dr["MakineID"].ToString();
+                     PSadi = dr["MakineAdi"].ToString();
+                     PSkodu = dr["MakineKodu"].ToString();
+                     PSoperasyonid = dr["OperasyonID"].ToString();
                     /////////////////////////
 
                     dr.Close();
@@ -132,5 +134,167 @@ namespace MeshEkran.Classlar
         }
         #endregion
 
+        #region OperatorVarmiKontrolu
+        public bool OperatorVarmiKontrolu(KullaniciDLL.Operator degisken)
+        {
+            bool result = false;
+            using (var connection = MeshEkran.Veritabani.Database.GetConnection())
+            {
+                var command = new SqlCommand("SELECT * FROM Operator WHERE SicilNo='" + degisken.SicilNO + "'")
+                {
+                    Connection = connection
+                };
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        result = true;
+                    }
+                }
+                connection.Close();
+            }
+            return result;
+        }
+        #endregion
+
+        #region OperatorEkleme
+        public bool OperatorEkleme(KullaniciDLL.Operator degisken)
+        {
+            bool result = false;
+            if (!OperatorVarmiKontrolu(degisken))
+            {
+                using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
+                {
+                    try
+                    {
+
+
+                        string kayit = "insert into Operator(Ad,Soyad,DogumTarihi,SicilNo,IseBaslangicTarihi,DurumAP) values (@ad,@soyad,@dogumtarihi,@sicilno,@isebaslangictarihi,@durumap)";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@ad", degisken.Isim);
+                        komut.Parameters.AddWithValue("@soyad", degisken.Soyisim);
+                        komut.Parameters.AddWithValue("@dogumtarihi", degisken.DogumTarihi);
+                        komut.Parameters.AddWithValue("@sicilno", degisken.SicilNO);
+                        komut.Parameters.AddWithValue("@isebaslangictarihi", degisken.IsBaslangicTarihi);
+                        komut.Parameters.AddWithValue("@durumap", degisken.DurumAP);
+
+                        baglanti.Open();
+                        if (komut.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+                        baglanti.Close();
+
+                    }
+                    catch (Exception hata)
+                    {
+                        MessageBox.Show("İşlem Sırasında Hata Oluştu. \n\n\n\n" + hata.Message);
+                    }
+
+                    return result;
+                }
+            }
+            return result;
+        }
+#endregion
+
+        #region OperatorSilme
+        public bool OperatorSilme(KullaniciDLL.Operator degisken)
+        {
+            bool result = false;
+            using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "SELECT * from Operator where OperatorID=@opid";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@opid", degisken.OperatorID);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["OperatorID"].ToString();
+                    string adsoyad = dr["Ad"].ToString() +" "+ dr["Soyad"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + adsoyad + " kişisini veritabanından silmek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+                        string silmeSorgusu = "DELETE from Operator where OperatorID=@opid";
+                        SqlCommand silKomutu = new SqlCommand(silmeSorgusu, baglanti);
+                        silKomutu.Parameters.AddWithValue("@opid", degisken.OperatorID);
+                        if (silKomutu.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir kişi bulunamadı.");
+                }
+
+                return result;
+            }
+        }
+#endregion
+
+        #region OperatorGuncelleme
+        public bool OperatorGuncelleme(KullaniciDLL.Operator degisken)
+        {
+           bool result = false;
+            using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "SELECT * from Operator where OperatorID=@opid";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@opid", degisken.OperatorID);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["OperatorID"].ToString();
+                    string adsoyad = dr["Ad"].ToString() +" "+ dr["Soyad"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + adsoyad + " kişisini güncellemek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+                        
+                        string kayit = "UPDATE Operator SET Ad=@ad,Soyad=@soyad,DogumTarihi=@dogumtarihi,SicilNo=@sicilno,IseBaslangicTarihi=@isbaslangictar,IstenCikisTarihi=@iscikistar,DurumAP=@durumap where OperatorID=@OPID";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@ad", degisken.Isim);
+                        komut.Parameters.AddWithValue("@soyad", degisken.Soyisim);
+                        komut.Parameters.AddWithValue("@dogumtarihi", degisken.DogumTarihi);
+                        komut.Parameters.AddWithValue("@sicilno", degisken.SicilNO);
+                        komut.Parameters.AddWithValue("@isbaslangictar", degisken.IsBaslangicTarihi);
+                        komut.Parameters.AddWithValue("@iscikistar", degisken.IsCikisTarihi);
+                        komut.Parameters.AddWithValue("@durumap", degisken.DurumAP);
+                        komut.Parameters.AddWithValue("@OPID", degisken.OperatorID);
+                        komut.ExecuteNonQuery();
+                        
+                        MessageBox.Show("Operatör bilgileri başarıyla güncellendi.");
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir operatör bulunamadı.");
+                }
+
+                return result;
+            }
+        }
+#endregion
     }
 }

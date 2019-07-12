@@ -35,7 +35,7 @@ namespace MeshEkran
  
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string DBSecimAd = null;
+            string DBSecimAd;
             DBSecimAd = comboBox1.Text;
 
             if(DBSecimAd == "")
@@ -44,7 +44,7 @@ namespace MeshEkran
             }
             else
             {
-                string connetionString = null;
+                string connetionString;
                 SqlConnection cnn;
                 connetionString = "Data Source=" + ServerName + ";Initial Catalog=" + DBSecimAd + ";Integrated Security=TRUE";
                 cnn = new SqlConnection(connetionString);
@@ -101,8 +101,11 @@ namespace MeshEkran
             {
                 MessageBox.Show("Admin Ekranına yönlendiriliyorsunuz...");
 
-                Giris_Admin ac = new Giris_Admin();
-                ac.StartPosition = FormStartPosition.CenterScreen;
+                //Admin_AnaMenu ac = new Admin_AnaMenu();
+                Giris_Admin ac = new Giris_Admin
+                {
+                    StartPosition = FormStartPosition.CenterScreen
+                };
                 ac.Show();
                 this.Hide();
             }
