@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="MasDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MasDLL.dll</HintPath>
+      <HintPath>..\..\MasDLL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Arşiv.cs" />
     <Compile Include="Classlar\AdminGiris.cs" />
+    <Compile Include="Classlar\Metotlar.cs" />
     <Compile Include="Classlar\OperatorGiris.cs" />
     <Compile Include="Classlar\SQLIslemleri.cs" />
     <Compile Include="DataSetler\FirmaDBListDataSet.Designer.cs">

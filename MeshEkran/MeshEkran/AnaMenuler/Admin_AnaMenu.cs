@@ -33,7 +33,7 @@ namespace MeshEkran
         #region OperatorListesiTabGrid
         private void OperatorGrid()
         {
-           
+
             try
             {
                 using (var connection = MeshEkran.Veritabani.Database.GetConnection())
@@ -82,7 +82,7 @@ namespace MeshEkran
         #region MakineListesiTabGrid
         private void MakinelerGrid()
         {
-           
+
             try
             {
                 using (var connection = MeshEkran.Veritabani.Database.GetConnection())
@@ -119,7 +119,7 @@ namespace MeshEkran
             }
 
 
-            
+
         }
         #endregion
 
@@ -200,7 +200,7 @@ namespace MeshEkran
             catch (Exception msg)
             {
                 MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
-                
+
             }
         }
         #endregion
@@ -301,7 +301,7 @@ namespace MeshEkran
         #region MakineSilmeButonEvent
         private void MakineSilmeBtn_Click(object sender, EventArgs e)
         {
-         
+
             MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
             MasDLL.Rapor giris = new MasDLL.Rapor();
 
@@ -328,7 +328,7 @@ namespace MeshEkran
                 OperasyonlarGrid();
 
             }
-           
+
         }
         #endregion
 
@@ -356,9 +356,9 @@ namespace MeshEkran
                 e.Handled = true;
             }
         }
-      
 
-        
+
+
         private void TextBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -395,7 +395,7 @@ namespace MeshEkran
         #region OperatorlerGrid CellClick Eventi
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.OperatorlerGrid.Rows[e.RowIndex];
@@ -493,9 +493,9 @@ namespace MeshEkran
         #region OperatorGuncelleButonEvent
         private void OperatorGuncelleBtn_Click(object sender, EventArgs e)
         {
-           
 
-           
+
+
             try
             {
                 if (durumcheck.Checked)
@@ -563,7 +563,7 @@ namespace MeshEkran
 
                     }
                 }
-                
+
 
             }
             catch (Exception hata)
@@ -576,6 +576,7 @@ namespace MeshEkran
 
         #endregion
 
+        #region OperatorTabPageClickEventListesi
         private void TabControl3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage17"]) //ekleme
@@ -588,13 +589,13 @@ namespace MeshEkran
                 DogumDateTimeBox.Enabled = true;
                 ESicilNoBox.Enabled = true;
                 IstenCikisDateTimeBox.Enabled = false;
-                durumcheck.Enabled = false;               
+                durumcheck.Enabled = false;
                 EDurumBox.Enabled = true;
                 isgirisdatetimebox.Enabled = true;
 
                 EDurumBox.Text = "1";
 
-               
+
 
             }
             if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage18"]) //silme
@@ -628,5 +629,121 @@ namespace MeshEkran
 
             }
         }
+
+        #endregion
+
+        #region ÜrünEklemeButonEvent
+        private void UrunEkleBtn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (urunaciklamabox.Text == "" && urunadibox.Text == "" && urunkodubox.Text == "" && enbox.Text == "" && boybox.Text == "")
+                {
+                    MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                }
+                else
+                {
+
+                    MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        UrunAciklama = urunaciklamabox.Text,
+                        UrunAdi = urunadibox.Text,
+                        UrunKodu = urunkodubox.Text,
+                        UrunEn = Convert.ToInt32(enbox.Text),
+                        UrunBoy = Convert.ToInt32(boybox.Text),
+                    };
+
+
+                    if (islem.UrunEkleme(giris))
+                    {
+                        MessageBox.Show("Ürün ekleme işlemi başarıyla tamamlandı.");
+                        UrunlerListesiGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu ürün koduna ait bir ürün zaten mevcuttur. Ekleme işlemi yapılamadı.");
+                    }
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+
+
+        }
+        #endregion
+
+        #region ÜrünSilButonEvent
+        private void UrunSilmeBtn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (UrunKoduSBox.Text == "")
+                {
+                    MessageBox.Show("Lütfen Ürün Kodu isimli kutucuğu boş bırakmayınız. Aksi takdirde silme işlemi yapamayacaksınız.");
+                }
+                else
+                {
+
+                    Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        UrunKodu = UrunKoduSBox.Text,
+                    };
+
+
+
+                    if (islem.UrunSilme(giris))
+                    {
+                        MessageBox.Show("Ürün silme işlemi başarıyla tammalandı.");
+                        UrunlerListesiGrid();
+                    }
+
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+        #endregion
+
+        private void UrunGuncelleBtn_Click(object sender, EventArgs e)
+        {
+         
+            if (GUrunAcikBox.Text == "" && GUrunAdiBox.Text == "" && GUrunKoduBox.Text == "" && GUrunIDBox.Text == "" & GUrunBoyBox.Text == "" & GUrunEnBox.Text == "")
+            {
+                MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+            }
+            else
+            {
+
+                Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
+                MasDLL.Rapor giris = new MasDLL.Rapor
+                {
+                    UrunID = Convert.ToInt32(GUrunIDBox.Text),
+                    UrunAdi = GUrunAdiBox.Text,
+                    UrunKodu = GUrunKoduBox.Text,
+                    UrunAciklama = GUrunAcikBox.Text,
+                    UrunBoy = Convert.ToInt32(GUrunBoyBox.Text),
+                    UrunEn = Convert.ToInt32(GUrunEnBox.Text)
+                };
+
+                if (islem.UrunGuncelleme(giris))
+                {
+                    MessageBox.Show("Ürün güncelleme işlemi başarıyla yapıldı.");
+                    UrunlerListesiGrid();
+                }
+            }
+        }
     }
 }
+

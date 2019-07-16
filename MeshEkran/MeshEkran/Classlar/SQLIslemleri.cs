@@ -14,6 +14,7 @@ namespace MeshEkran.Classlar
 
         public static string PSid, PSadi, PSkodu, PSoperasyonid;
 
+
         #region MakineVarmiKontrolu
         private bool MakineVarsa(MasDLL.Rapor degisken)
         {
@@ -75,14 +76,14 @@ namespace MeshEkran.Classlar
                     return result;
                 }
             }
-            return result;                     
+            return result;
         }
         #endregion
 
         #region MakineSilme
         public bool MakineSilme(MasDLL.Rapor degisken)
         {
-           
+
             bool result = false;
             using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
             {
@@ -99,10 +100,10 @@ namespace MeshEkran.Classlar
                     string kodu = dr["MakineKodu"].ToString();
 
                     //////////////////////////
-                     PSid = dr["MakineID"].ToString();
-                     PSadi = dr["MakineAdi"].ToString();
-                     PSkodu = dr["MakineKodu"].ToString();
-                     PSoperasyonid = dr["OperasyonID"].ToString();
+                    PSid = dr["MakineID"].ToString();
+                    PSadi = dr["MakineAdi"].ToString();
+                    PSkodu = dr["MakineKodu"].ToString();
+                    PSoperasyonid = dr["OperasyonID"].ToString();
                     /////////////////////////
 
                     dr.Close();
@@ -119,7 +120,7 @@ namespace MeshEkran.Classlar
 
 
                     }
-                    
+
                     baglanti.Close();
 
 
@@ -132,6 +133,10 @@ namespace MeshEkran.Classlar
                 return result;
             }
         }
+        #endregion
+
+        #region MakineGuncelleme
+
         #endregion
 
         #region OperatorVarmiKontrolu
@@ -197,7 +202,7 @@ namespace MeshEkran.Classlar
             }
             return result;
         }
-#endregion
+        #endregion
 
         #region OperatorSilme
         public bool OperatorSilme(KullaniciDLL.Operator degisken)
@@ -214,7 +219,7 @@ namespace MeshEkran.Classlar
                 if (dr.Read())
                 {
                     string id = dr["OperatorID"].ToString();
-                    string adsoyad = dr["Ad"].ToString() +" "+ dr["Soyad"].ToString();
+                    string adsoyad = dr["Ad"].ToString() + " " + dr["Soyad"].ToString();
 
                     dr.Close();
                     DialogResult durum = MessageBox.Show(id + " numaralı " + adsoyad + " kişisini veritabanından silmek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
@@ -243,12 +248,12 @@ namespace MeshEkran.Classlar
                 return result;
             }
         }
-#endregion
+        #endregion
 
         #region OperatorGuncelleme
         public bool OperatorGuncelleme(KullaniciDLL.Operator degisken)
         {
-           bool result = false;
+            bool result = false;
             using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
             {
                 baglanti.Open();
@@ -260,13 +265,13 @@ namespace MeshEkran.Classlar
                 if (dr.Read())
                 {
                     string id = dr["OperatorID"].ToString();
-                    string adsoyad = dr["Ad"].ToString() +" "+ dr["Soyad"].ToString();
+                    string adsoyad = dr["Ad"].ToString() + " " + dr["Soyad"].ToString();
 
                     dr.Close();
                     DialogResult durum = MessageBox.Show(id + " numaralı " + adsoyad + " kişisini güncellemek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
                     if (DialogResult.Yes == durum)
                     {
-                        
+
                         string kayit = "UPDATE Operator SET Ad=@ad,Soyad=@soyad,DogumTarihi=@dogumtarihi,SicilNo=@sicilno,IseBaslangicTarihi=@isbaslangictar,IstenCikisTarihi=@iscikistar,DurumAP=@durumap where OperatorID=@OPID";
                         SqlCommand komut = new SqlCommand(kayit, baglanti);
                         komut.Parameters.AddWithValue("@ad", degisken.Isim);
@@ -278,7 +283,7 @@ namespace MeshEkran.Classlar
                         komut.Parameters.AddWithValue("@durumap", degisken.DurumAP);
                         komut.Parameters.AddWithValue("@OPID", degisken.OperatorID);
                         komut.ExecuteNonQuery();
-                        
+
                         MessageBox.Show("Operatör bilgileri başarıyla güncellendi.");
 
                     }
@@ -295,6 +300,169 @@ namespace MeshEkran.Classlar
                 return result;
             }
         }
-#endregion
+        #endregion
+
+        #region UrunVarmiKontrolu
+        private bool UrunVarsa(MasDLL.Rapor degisken)
+        {
+
+
+            bool result = false;
+            using (var connection = MeshEkran.Veritabani.Database.GetConnection())
+            {
+                var command = new SqlCommand("SELECT * FROM UrunTablosu WHERE UrunKodu='" + degisken.UrunKodu + "'")
+                {
+                    Connection = connection
+                };
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        result = true;
+                    }
+                }
+                connection.Close();
+            }
+            return result;
+
+        }
+        #endregion
+
+        #region UrunEkleme
+        public bool UrunEkleme(MasDLL.Rapor degisken)
+        {
+
+            bool result = false;
+            if (!UrunVarsa(degisken))
+            {
+                using (var baglanti = Veritabani.Database.GetConnection())
+                {
+                    try
+                    {
+
+
+                        string kayit = "insert into UrunTablosu(UrunAdi,UrunAciklama,UrunKodu,En,Boy) values (@urunad,@urunaciklama,@urunkodu,@en,@boy)";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@urunad", degisken.UrunAdi);
+                        komut.Parameters.AddWithValue("@urunaciklama", degisken.UrunAciklama);
+                        komut.Parameters.AddWithValue("@urunkodu", degisken.UrunKodu);
+                        komut.Parameters.AddWithValue("@en", degisken.UrunEn);
+                        komut.Parameters.AddWithValue("@boy", degisken.UrunBoy);
+
+                        baglanti.Open();
+                        if (komut.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+                        baglanti.Close();
+
+                    }
+                    catch (Exception hata)
+                    {
+                        MessageBox.Show("İşlem Sırasında Hata Oluştu. \n\n\n\n" + hata.Message);
+                    }
+
+                    return result;
+                }
+            }
+            return result;
+        }
+        #endregion
+
+        #region UrunSilme
+        public bool UrunSilme(MasDLL.Rapor degisken)
+        {
+            bool result = false;
+            using (var baglanti = MeshEkran.Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "SELECT * from UrunTablosu where UrunKodu=@urunkodu";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@urunkodu", degisken.UrunKodu);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["UrunID"].ToString();
+                    string urunadkod = dr["UrunAdi"].ToString() + " " + dr["UrunKodu"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + urunadkod + " ürününü veritabanından silmek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+                        string silmeSorgusu = "DELETE from UrunTablosu where UrunKodu=@urunkodu";
+                        SqlCommand silKomutu = new SqlCommand(silmeSorgusu, baglanti);
+                        silKomutu.Parameters.AddWithValue("@urunkodu", degisken.UrunKodu);
+                        if (silKomutu.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir ürün bulunamadı. Silme işlemi tamamlanamadı.");
+                }
+
+                return result;
+            }
+        }
+        #endregion
+
+        #region UrunGuncelleme
+        public bool UrunGuncelleme(MasDLL.Rapor degisken)
+        {
+            bool result = false;
+            using (var baglanti = Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "SELECT * from UrunTablosu where UrunKodu=@urunkod";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@urunkod", degisken.UrunKodu);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["UrunID"].ToString();
+                    string urunadkod = dr["UrunAdi"].ToString() + " " + dr["UrunKodu"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + urunadkod + " ürününü güncellemek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+
+                        string kayit = "UPDATE UrunTablosu SET UrunAdi=@urunad,UrunAciklama=@urunaciklama,UrunKodu=@urunkodu,En=@urunen,Boy=@urunboy where UrunKodu=@urunkod";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@urunad", degisken.UrunAdi);
+                        komut.Parameters.AddWithValue("@urunaciklama", degisken.UrunAciklama);
+                        komut.Parameters.AddWithValue("@urunkodu", degisken.UrunKodu);
+                        komut.Parameters.AddWithValue("@urunen", degisken.UrunEn);
+                        komut.Parameters.AddWithValue("@urunboy", degisken.UrunBoy);
+                        komut.ExecuteNonQuery();
+
+                        MessageBox.Show("Ürün bilgileri başarıyla güncellendi.");
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir ürün bulunamadı.");
+                }
+
+                return result;
+            }
+        }
+        #endregion
     }
 }

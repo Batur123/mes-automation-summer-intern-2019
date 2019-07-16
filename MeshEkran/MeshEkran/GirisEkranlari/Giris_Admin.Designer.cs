@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.GeriDonButon = new System.Windows.Forms.PictureBox();
             this.KapatButon = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDonButon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).BeginInit();
             this.SuspendLayout();
@@ -128,12 +129,23 @@
             this.KapatButon.TabStop = false;
             this.KapatButon.Click += new System.EventHandler(this.KapatButon_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 210);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Giris_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(354, 282);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GeriDonButon);
             this.Controls.Add(this.KapatButon);
             this.Controls.Add(this.label4);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox KapatButon;
         private System.Windows.Forms.PictureBox GeriDonButon;
+        private System.Windows.Forms.Button button1;
     }
 }
 

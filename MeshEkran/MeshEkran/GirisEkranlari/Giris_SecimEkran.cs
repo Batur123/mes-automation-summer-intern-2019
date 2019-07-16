@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient; //sql
+using MeshEkran.Classlar;
 
 namespace MeshEkran
 {
-     
     public partial class Giris_SecimEkran : Form
     {
         public Giris_SecimEkran()
@@ -19,28 +19,59 @@ namespace MeshEkran
             InitializeComponent();
         }
 
+        public static bool Kontrol;
+        public static string DBAdiGlobal;
+
         public string ServerName = "BATUR"+"\\"+"BATUR";
 
+        #region Giris_SecimEkran Load Eventi
         private void Giris_SecimEkran_Load(object sender, EventArgs e)
         {
            
             AdminButon.Enabled = false;
             OperatorButon.Enabled = false;
-            this.dBAdlariTableAdapter.Fill(this.firmaDBListDataSet.DBAdlari);
 
+            string DBSecimAd = "FirmaDBList";
+            
+
+            SqlConnection baglanti = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=" + DBSecimAd + ";Integrated Security=TRUE");
+            SqlCommand komut = new SqlCommand("SELECT dbID, dbName FROM DBAdlari", baglanti);
+            SqlDataAdapter da;
+            DataTable dt;
+            DataRow row;
+            baglanti.Open();
+            da = new SqlDataAdapter(komut);
+            dt = new DataTable();
+            da.Fill(dt);
+
+            row = dt.NewRow();
+            row["dbID"] = 0;
+            row["dbName"] = "Lütfen veritabanını seçiniz.";
+            dt.Rows.InsertAt(row, 0);
+
+            
+            comboBox1.DataSource = dt;
+            comboBox1.ValueMember = "dbID";
+            comboBox1.DisplayMember = "dbName";
+            baglanti.Close();
+
+            
         }
+        #endregion
 
-        public static bool Kontrol;
-        public static string DBAdiGlobal;
- 
+        #region VeritabaniComboboxSeçimEventi
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
             string DBSecimAd;
             DBSecimAd = comboBox1.Text;
 
-            if(DBSecimAd == "")
+            if(DBSecimAd == "" || comboBox1.SelectedIndex == 0)
             {
-                pictureBox3.Image = MeshEkran.Properties.Resources.RedIcon;
+                pictureBox3.Image = Properties.Resources.RedIcon;
+                AdminButon.Enabled = false;
+                OperatorButon.Enabled = false;
+                Kontrol = false;
             }
             else
             {
@@ -53,7 +84,7 @@ namespace MeshEkran
                     cnn.Open();
 
                     MessageBox.Show("Veritabanı bağlantısı kuruldu. Veritabanınız: " + DBSecimAd);
-                    pictureBox3.Image = MeshEkran.Properties.Resources.greenicon;
+                    pictureBox3.Image = Properties.Resources.greenicon;
 
                     DBAdiGlobal = DBSecimAd;
                     AdminButon.Enabled = true;
@@ -68,19 +99,22 @@ namespace MeshEkran
 
                     MessageBox.Show("Veritabanı bağlantısı kurulamadı. Seçmeye çalıştığınız veritabanı: " + DBSecimAd);
                     MessageBox.Show(ex.Message);
-                    pictureBox3.Image = MeshEkran.Properties.Resources.RedIcon;
+                    pictureBox3.Image = Properties.Resources.RedIcon;
 
                     this.dBAdlariTableAdapter.Fill(this.firmaDBListDataSet.DBAdlari);
 
                     AdminButon.Enabled = false;
                     OperatorButon.Enabled = false;
                     Kontrol = false;
+                    comboBox1.SelectedIndex = 0;
 
                 }
             }
            
         }
+        #endregion
 
+        #region OperatorGirisEkrani Buton Eventi
         private void OperatorButon_Click(object sender, EventArgs e)
         {
  
@@ -94,7 +128,9 @@ namespace MeshEkran
                 MessageBox.Show("Veritabanı bağlantınız düzgün sağlanamadı. Lütfen tekrar deneyiniz.");
             }
         }
+        #endregion
 
+        #region AdminGirişEkranı Buton Eventi
         private void AdminButon_Click(object sender, EventArgs e)
         {
             if (Kontrol == true)
@@ -114,5 +150,6 @@ namespace MeshEkran
                 MessageBox.Show("Veritabanı bağlantınız düzgün sağlanamadı. Lütfen tekrar deneyiniz.");
             }
         }
+        #endregion
     }
 }

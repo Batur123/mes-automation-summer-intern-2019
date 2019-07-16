@@ -58,7 +58,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.UrunlerGrid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -67,6 +66,8 @@
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.isgirisdatetimebox = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.IstenCikisDateTimeBox = new System.Windows.Forms.DateTimePicker();
             this.DogumDateTimeBox = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,8 +99,41 @@
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.GeriDonButon = new System.Windows.Forms.PictureBox();
             this.KapatButon = new System.Windows.Forms.PictureBox();
-            this.isgirisdatetimebox = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.UrunTemixleBtn = new System.Windows.Forms.PictureBox();
+            this.UrunEkleBtn = new System.Windows.Forms.PictureBox();
+            this.urunkodubox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.urunaciklamabox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.urunadibox = new System.Windows.Forms.TextBox();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.UrunTemizleBtn = new System.Windows.Forms.PictureBox();
+            this.UrunSilmeBtn = new System.Windows.Forms.PictureBox();
+            this.UrunKoduSBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.boybox = new System.Windows.Forms.TextBox();
+            this.enbox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.GUrunBoyBox = new System.Windows.Forms.TextBox();
+            this.GUrunEnBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UrunGuncelleBtn = new System.Windows.Forms.PictureBox();
+            this.GUrunKoduBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.GUrunAcikBox = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.GUrunAdiBox = new System.Windows.Forms.TextBox();
+            this.GUrunIDBox = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -123,6 +157,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperatorlerGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDonButon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).BeginInit();
+            this.tabControl5.SuspendLayout();
+            this.tabPage20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunTemixleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunEkleBtn)).BeginInit();
+            this.tabPage21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunTemizleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunSilmeBtn)).BeginInit();
+            this.tabPage22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunGuncelleBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -182,11 +226,13 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage14);
             this.tabControl2.Controls.Add(this.tabPage15);
+            this.tabControl2.Controls.Add(this.tabPage23);
             this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabControl2.Location = new System.Drawing.Point(13, 21);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(627, 515);
+            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl2.TabIndex = 13;
             // 
             // tabPage14
@@ -445,8 +491,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.tabControl5);
             this.tabPage5.Controls.Add(this.UrunlerGrid);
-            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1322, 552);
@@ -457,20 +503,11 @@
             // UrunlerGrid
             // 
             this.UrunlerGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UrunlerGrid.Location = new System.Drawing.Point(414, 15);
+            this.UrunlerGrid.Location = new System.Drawing.Point(639, 15);
             this.UrunlerGrid.Name = "UrunlerGrid";
             this.UrunlerGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.UrunlerGrid.Size = new System.Drawing.Size(894, 521);
+            this.UrunlerGrid.Size = new System.Drawing.Size(669, 521);
             this.UrunlerGrid.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(281, 119);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
@@ -565,6 +602,24 @@
             this.tabPage19.TabIndex = 0;
             this.tabPage19.Text = "Operatör";
             this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // isgirisdatetimebox
+            // 
+            this.isgirisdatetimebox.Location = new System.Drawing.Point(119, 240);
+            this.isgirisdatetimebox.Name = "isgirisdatetimebox";
+            this.isgirisdatetimebox.Size = new System.Drawing.Size(150, 20);
+            this.isgirisdatetimebox.TabIndex = 87;
+            this.isgirisdatetimebox.Value = new System.DateTime(2019, 7, 12, 14, 52, 46, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(6, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 16);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "İşten Giriş Tarihi:";
             // 
             // IstenCikisDateTimeBox
             // 
@@ -888,23 +943,364 @@
             this.KapatButon.TabStop = false;
             this.KapatButon.Click += new System.EventHandler(this.KapatButon_Click);
             // 
-            // isgirisdatetimebox
+            // tabControl5
             // 
-            this.isgirisdatetimebox.Location = new System.Drawing.Point(119, 240);
-            this.isgirisdatetimebox.Name = "isgirisdatetimebox";
-            this.isgirisdatetimebox.Size = new System.Drawing.Size(150, 20);
-            this.isgirisdatetimebox.TabIndex = 87;
-            this.isgirisdatetimebox.Value = new System.DateTime(2019, 7, 12, 14, 52, 46, 0);
+            this.tabControl5.Controls.Add(this.tabPage20);
+            this.tabControl5.Controls.Add(this.tabPage21);
+            this.tabControl5.Controls.Add(this.tabPage22);
+            this.tabControl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabControl5.Location = new System.Drawing.Point(18, 15);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(601, 521);
+            this.tabControl5.TabIndex = 14;
             // 
-            // label4
+            // tabPage20
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(6, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 16);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "İşten Giriş Tarihi:";
+            this.tabPage20.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage20.Controls.Add(this.label24);
+            this.tabPage20.Controls.Add(this.label21);
+            this.tabPage20.Controls.Add(this.boybox);
+            this.tabPage20.Controls.Add(this.enbox);
+            this.tabPage20.Controls.Add(this.UrunTemixleBtn);
+            this.tabPage20.Controls.Add(this.UrunEkleBtn);
+            this.tabPage20.Controls.Add(this.urunkodubox);
+            this.tabPage20.Controls.Add(this.label5);
+            this.tabPage20.Controls.Add(this.label6);
+            this.tabPage20.Controls.Add(this.urunaciklamabox);
+            this.tabPage20.Controls.Add(this.label7);
+            this.tabPage20.Controls.Add(this.urunadibox);
+            this.tabPage20.Location = new System.Drawing.Point(4, 33);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage20.Size = new System.Drawing.Size(593, 484);
+            this.tabPage20.TabIndex = 0;
+            this.tabPage20.Text = "Ürün Ekle";
+            // 
+            // UrunTemixleBtn
+            // 
+            this.UrunTemixleBtn.Image = global::MeshEkran.Properties.Resources.CancelIcon;
+            this.UrunTemixleBtn.Location = new System.Drawing.Point(328, 247);
+            this.UrunTemixleBtn.Name = "UrunTemixleBtn";
+            this.UrunTemixleBtn.Size = new System.Drawing.Size(85, 62);
+            this.UrunTemixleBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UrunTemixleBtn.TabIndex = 14;
+            this.UrunTemixleBtn.TabStop = false;
+            // 
+            // UrunEkleBtn
+            // 
+            this.UrunEkleBtn.Image = global::MeshEkran.Properties.Resources.Ok_256256;
+            this.UrunEkleBtn.Location = new System.Drawing.Point(232, 247);
+            this.UrunEkleBtn.Name = "UrunEkleBtn";
+            this.UrunEkleBtn.Size = new System.Drawing.Size(85, 62);
+            this.UrunEkleBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UrunEkleBtn.TabIndex = 13;
+            this.UrunEkleBtn.TabStop = false;
+            this.UrunEkleBtn.Click += new System.EventHandler(this.UrunEkleBtn_Click);
+            // 
+            // urunkodubox
+            // 
+            this.urunkodubox.Location = new System.Drawing.Point(221, 142);
+            this.urunkodubox.Multiline = true;
+            this.urunkodubox.Name = "urunkodubox";
+            this.urunkodubox.ShortcutsEnabled = false;
+            this.urunkodubox.Size = new System.Drawing.Size(202, 29);
+            this.urunkodubox.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Ürun Kodu:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(78, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 24);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Ürün Açıklama:";
+            // 
+            // urunaciklamabox
+            // 
+            this.urunaciklamabox.Location = new System.Drawing.Point(221, 107);
+            this.urunaciklamabox.Multiline = true;
+            this.urunaciklamabox.Name = "urunaciklamabox";
+            this.urunaciklamabox.ShortcutsEnabled = false;
+            this.urunaciklamabox.Size = new System.Drawing.Size(202, 29);
+            this.urunaciklamabox.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(126, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 24);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Ürün Adı:";
+            // 
+            // urunadibox
+            // 
+            this.urunadibox.Location = new System.Drawing.Point(221, 72);
+            this.urunadibox.Multiline = true;
+            this.urunadibox.Name = "urunadibox";
+            this.urunadibox.ShortcutsEnabled = false;
+            this.urunadibox.Size = new System.Drawing.Size(202, 29);
+            this.urunadibox.TabIndex = 11;
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage21.Controls.Add(this.UrunTemizleBtn);
+            this.tabPage21.Controls.Add(this.UrunSilmeBtn);
+            this.tabPage21.Controls.Add(this.UrunKoduSBox);
+            this.tabPage21.Controls.Add(this.label18);
+            this.tabPage21.Location = new System.Drawing.Point(4, 33);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Size = new System.Drawing.Size(593, 484);
+            this.tabPage21.TabIndex = 1;
+            this.tabPage21.Text = "Ürün Sil";
+            // 
+            // UrunTemizleBtn
+            // 
+            this.UrunTemizleBtn.Image = global::MeshEkran.Properties.Resources.CancelIcon;
+            this.UrunTemizleBtn.Location = new System.Drawing.Point(310, 94);
+            this.UrunTemizleBtn.Name = "UrunTemizleBtn";
+            this.UrunTemizleBtn.Size = new System.Drawing.Size(66, 59);
+            this.UrunTemizleBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UrunTemizleBtn.TabIndex = 22;
+            this.UrunTemizleBtn.TabStop = false;
+            // 
+            // UrunSilmeBtn
+            // 
+            this.UrunSilmeBtn.Image = global::MeshEkran.Properties.Resources.Ok_256256;
+            this.UrunSilmeBtn.Location = new System.Drawing.Point(238, 94);
+            this.UrunSilmeBtn.Name = "UrunSilmeBtn";
+            this.UrunSilmeBtn.Size = new System.Drawing.Size(66, 59);
+            this.UrunSilmeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UrunSilmeBtn.TabIndex = 21;
+            this.UrunSilmeBtn.TabStop = false;
+            this.UrunSilmeBtn.Click += new System.EventHandler(this.UrunSilmeBtn_Click);
+            // 
+            // UrunKoduSBox
+            // 
+            this.UrunKoduSBox.Location = new System.Drawing.Point(238, 54);
+            this.UrunKoduSBox.Multiline = true;
+            this.UrunKoduSBox.Name = "UrunKoduSBox";
+            this.UrunKoduSBox.ShortcutsEnabled = false;
+            this.UrunKoduSBox.Size = new System.Drawing.Size(138, 24);
+            this.UrunKoduSBox.TabIndex = 19;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(126, 54);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(106, 24);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Ürün Kodu:";
+            // 
+            // tabPage22
+            // 
+            this.tabPage22.Controls.Add(this.GUrunIDBox);
+            this.tabPage22.Controls.Add(this.label31);
+            this.tabPage22.Controls.Add(this.label8);
+            this.tabPage22.Controls.Add(this.label9);
+            this.tabPage22.Controls.Add(this.GUrunBoyBox);
+            this.tabPage22.Controls.Add(this.GUrunEnBox);
+            this.tabPage22.Controls.Add(this.pictureBox1);
+            this.tabPage22.Controls.Add(this.UrunGuncelleBtn);
+            this.tabPage22.Controls.Add(this.GUrunKoduBox);
+            this.tabPage22.Controls.Add(this.label12);
+            this.tabPage22.Controls.Add(this.label29);
+            this.tabPage22.Controls.Add(this.GUrunAcikBox);
+            this.tabPage22.Controls.Add(this.label30);
+            this.tabPage22.Controls.Add(this.GUrunAdiBox);
+            this.tabPage22.Location = new System.Drawing.Point(4, 33);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.Size = new System.Drawing.Size(593, 484);
+            this.tabPage22.TabIndex = 2;
+            this.tabPage22.Text = "Ürün Güncelle";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // tabPage23
+            // 
+            this.tabPage23.Location = new System.Drawing.Point(4, 33);
+            this.tabPage23.Name = "tabPage23";
+            this.tabPage23.Size = new System.Drawing.Size(619, 478);
+            this.tabPage23.TabIndex = 2;
+            this.tabPage23.Text = "Makine Güncelle";
+            this.tabPage23.UseVisualStyleBackColor = true;
+            // 
+            // boybox
+            // 
+            this.boybox.Location = new System.Drawing.Point(221, 212);
+            this.boybox.Multiline = true;
+            this.boybox.Name = "boybox";
+            this.boybox.ShortcutsEnabled = false;
+            this.boybox.Size = new System.Drawing.Size(202, 29);
+            this.boybox.TabIndex = 16;
+            // 
+            // enbox
+            // 
+            this.enbox.Location = new System.Drawing.Point(221, 177);
+            this.enbox.Multiline = true;
+            this.enbox.Name = "enbox";
+            this.enbox.ShortcutsEnabled = false;
+            this.enbox.Size = new System.Drawing.Size(202, 29);
+            this.enbox.TabIndex = 15;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(176, 177);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 24);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "En:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(168, 212);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 24);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Boy:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(151, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 24);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Boy:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(159, 240);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 24);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "En:";
+            // 
+            // GUrunBoyBox
+            // 
+            this.GUrunBoyBox.Location = new System.Drawing.Point(204, 275);
+            this.GUrunBoyBox.Multiline = true;
+            this.GUrunBoyBox.Name = "GUrunBoyBox";
+            this.GUrunBoyBox.ShortcutsEnabled = false;
+            this.GUrunBoyBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunBoyBox.TabIndex = 28;
+            // 
+            // GUrunEnBox
+            // 
+            this.GUrunEnBox.Location = new System.Drawing.Point(204, 240);
+            this.GUrunEnBox.Multiline = true;
+            this.GUrunEnBox.Name = "GUrunEnBox";
+            this.GUrunEnBox.ShortcutsEnabled = false;
+            this.GUrunEnBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunEnBox.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MeshEkran.Properties.Resources.CancelIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(311, 310);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // UrunGuncelleBtn
+            // 
+            this.UrunGuncelleBtn.Image = global::MeshEkran.Properties.Resources.Ok_256256;
+            this.UrunGuncelleBtn.Location = new System.Drawing.Point(215, 310);
+            this.UrunGuncelleBtn.Name = "UrunGuncelleBtn";
+            this.UrunGuncelleBtn.Size = new System.Drawing.Size(85, 62);
+            this.UrunGuncelleBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UrunGuncelleBtn.TabIndex = 25;
+            this.UrunGuncelleBtn.TabStop = false;
+            this.UrunGuncelleBtn.Click += new System.EventHandler(this.UrunGuncelleBtn_Click);
+            // 
+            // GUrunKoduBox
+            // 
+            this.GUrunKoduBox.Location = new System.Drawing.Point(204, 205);
+            this.GUrunKoduBox.Multiline = true;
+            this.GUrunKoduBox.Name = "GUrunKoduBox";
+            this.GUrunKoduBox.ShortcutsEnabled = false;
+            this.GUrunKoduBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunKoduBox.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(92, 205);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 24);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Ürun Kodu:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(61, 170);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(137, 24);
+            this.label29.TabIndex = 20;
+            this.label29.Text = "Ürün Açıklama:";
+            // 
+            // GUrunAcikBox
+            // 
+            this.GUrunAcikBox.Location = new System.Drawing.Point(204, 170);
+            this.GUrunAcikBox.Multiline = true;
+            this.GUrunAcikBox.Name = "GUrunAcikBox";
+            this.GUrunAcikBox.ShortcutsEnabled = false;
+            this.GUrunAcikBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunAcikBox.TabIndex = 22;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(109, 135);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(89, 24);
+            this.label30.TabIndex = 19;
+            this.label30.Text = "Ürün Adı:";
+            // 
+            // GUrunAdiBox
+            // 
+            this.GUrunAdiBox.Location = new System.Drawing.Point(204, 135);
+            this.GUrunAdiBox.Multiline = true;
+            this.GUrunAdiBox.Name = "GUrunAdiBox";
+            this.GUrunAdiBox.ShortcutsEnabled = false;
+            this.GUrunAdiBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunAdiBox.TabIndex = 23;
+            // 
+            // GUrunIDBox
+            // 
+            this.GUrunIDBox.Location = new System.Drawing.Point(204, 100);
+            this.GUrunIDBox.Multiline = true;
+            this.GUrunIDBox.Name = "GUrunIDBox";
+            this.GUrunIDBox.ShortcutsEnabled = false;
+            this.GUrunIDBox.Size = new System.Drawing.Size(202, 29);
+            this.GUrunIDBox.TabIndex = 32;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(120, 100);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(78, 24);
+            this.label31.TabIndex = 31;
+            this.label31.Text = "Ürün ID:";
             // 
             // Admin_AnaMenu
             // 
@@ -945,6 +1341,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperatorlerGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDonButon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).EndInit();
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage20.ResumeLayout(false);
+            this.tabPage20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunTemixleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunEkleBtn)).EndInit();
+            this.tabPage21.ResumeLayout(false);
+            this.tabPage21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunTemizleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunSilmeBtn)).EndInit();
+            this.tabPage22.ResumeLayout(false);
+            this.tabPage22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UrunGuncelleBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -999,7 +1408,6 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView UrunlerGrid;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage19;
@@ -1023,5 +1431,40 @@
         private System.Windows.Forms.DateTimePicker DogumDateTimeBox;
         private System.Windows.Forms.DateTimePicker isgirisdatetimebox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tabPage23;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage20;
+        private System.Windows.Forms.PictureBox UrunTemixleBtn;
+        private System.Windows.Forms.PictureBox UrunEkleBtn;
+        private System.Windows.Forms.TextBox urunkodubox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox urunaciklamabox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox urunadibox;
+        private System.Windows.Forms.TabPage tabPage21;
+        private System.Windows.Forms.PictureBox UrunTemizleBtn;
+        private System.Windows.Forms.PictureBox UrunSilmeBtn;
+        private System.Windows.Forms.TextBox UrunKoduSBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabPage tabPage22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox boybox;
+        private System.Windows.Forms.TextBox enbox;
+        private System.Windows.Forms.TextBox GUrunIDBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox GUrunBoyBox;
+        private System.Windows.Forms.TextBox GUrunEnBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox UrunGuncelleBtn;
+        private System.Windows.Forms.TextBox GUrunKoduBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox GUrunAcikBox;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox GUrunAdiBox;
     }
 }

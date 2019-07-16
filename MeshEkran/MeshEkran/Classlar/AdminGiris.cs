@@ -19,21 +19,24 @@ namespace MeshEkran.Classlar
             KullaniciDLL.Admin adminuser = null;
             using (var connection = MeshEkran.Veritabani.Database.GetConnection())
             {
-                var command = new SqlCommand("SELECT *FROM Admin WHERE KullaniciAdi='" + KullaniciAdi + "'and Sifre='" + Sifre + "'");
-                command.Connection = connection;
+                var command = new SqlCommand("SELECT *FROM Admin WHERE KullaniciAdi='" + KullaniciAdi + "'and Sifre='" + Sifre + "'")
+                {
+                    Connection = connection
+                };
                 connection.Open();
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
 
-                        adminuser = new KullaniciDLL.Admin();
-
-                        adminuser.KullaniciID = reader.GetInt32(0);
-                        adminuser.KullaniciAdi = reader.GetString(1);
-                        adminuser.Sifre = reader.GetString(2);
-                        adminuser.Isim = reader.GetString(3);
-                        adminuser.Soyisim = reader.GetString(4);
+                        adminuser = new KullaniciDLL.Admin
+                        {
+                            KullaniciID = reader.GetInt32(0),
+                            KullaniciAdi = reader.GetString(1),
+                            Sifre = reader.GetString(2),
+                            Isim = reader.GetString(3),
+                            Soyisim = reader.GetString(4)
+                        };
 
                     }
                 }
@@ -49,8 +52,10 @@ namespace MeshEkran.Classlar
             bool result = false;
             using (var connection = MeshEkran.Veritabani.Database.GetConnection())
             {
-                var command = new SqlCommand("SELECT *FROM Admin WHERE KullaniciAdi='" + adminuser.KullaniciAdi + "'");
-                command.Connection = connection;
+                var command = new SqlCommand("SELECT *FROM Admin WHERE KullaniciAdi='" + adminuser.KullaniciAdi + "'")
+                {
+                    Connection = connection
+                };
                 connection.Open();
                 using (var reader = command.ExecuteReader())
                 {
@@ -73,8 +78,10 @@ namespace MeshEkran.Classlar
             {
                 using (var connection = MeshEkran.Veritabani.Database.GetConnection())
                 {
-                    var command = new SqlCommand("INSERT INTO Admin(KullaniciAdi,Sifre,Ad,Soyad) VALUES('" + adminuser.KullaniciAdi + "','" + adminuser.Sifre + "','" + adminuser.Isim + "','" + adminuser.Soyisim + "')");
-                    command.Connection = connection;
+                    var command = new SqlCommand("INSERT INTO Admin(KullaniciAdi,Sifre,Ad,Soyad) VALUES('" + adminuser.KullaniciAdi + "','" + adminuser.Sifre + "','" + adminuser.Isim + "','" + adminuser.Soyisim + "')")
+                    {
+                        Connection = connection
+                    };
                     connection.Open();
                     if (command.ExecuteNonQuery() != -1)
                     {

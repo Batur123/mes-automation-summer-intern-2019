@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeshEkran.Classlar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,13 +31,13 @@ namespace MeshEkran
         }
 
         public KullaniciDLL.Admin adminkullanicisi;
-        public MeshEkran.Classlar.AdminGiris islem;
+        public AdminGiris islem;
 
 
         private void GirisYapButon_Click(object sender, EventArgs e)
         {
 
-          
+
             try
             {
                 if (KullaniciAdBox.Text == "" && SifreBox.Text == "")
@@ -60,7 +61,7 @@ namespace MeshEkran
                         MessageBox.Show("Kullanıcı adı veya şifre yanlıştır. Lütfen tekrar deneyiniz.");
                     }
                 }
-                
+
             }
             catch (Exception hata)
             {
@@ -68,6 +69,34 @@ namespace MeshEkran
                 MessageBox.Show(hata.Message);
             }
 
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            
+            Metotlar.Ok("Naber", "İstenirse Title yazılır");
+            Metotlar.Ok("Naber 2");
+            Metotlar.No("başarısız mesaj");
+            Metotlar.No("başarısız mesaj", "ekstra title");
+
+
+            DialogResult sonuc = Metotlar.QuestionMesaj("Emin misin Reis ?", "iyi kaRAR ver");
+
+            if (sonuc == DialogResult.OK)
+            {
+                Metotlar.Ok("emin mişsin");
+            }
+            else
+            if (sonuc == DialogResult.No)
+            {
+                Metotlar.No("Emin değilmişsin, no ya bastın.");
+            }
+            else
+            if (sonuc == DialogResult.Cancel)
+            {
+                Metotlar.No("İşlem kullanıcı tarafından iptal edildi.","İŞLEM İPTAL");
+            }
 
         }
     }
