@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -171,6 +172,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ok-256256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-ios7-gear-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quittt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left_Arrow_-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,10 +19,11 @@ namespace MeshEkran
             InitializeComponent();
         }
 
+        #region Değişkenler
         public static bool Kontrol;
         public static string DBAdiGlobal;
-
-        public string ServerName = "BATUR"+"\\"+"BATUR";
+        public string ServerName = "BATUR" + "\\" + "BATUR";
+        #endregion
 
         #region Giris_SecimEkran Load Eventi
         private void Giris_SecimEkran_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace MeshEkran
             OperatorButon.Enabled = false;
 
             string DBSecimAd = "FirmaDBList";
-            
+
 
             SqlConnection baglanti = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=" + DBSecimAd + ";Integrated Security=TRUE");
             SqlCommand komut = new SqlCommand("SELECT dbID, dbName FROM DBAdlari", baglanti);
@@ -49,13 +50,13 @@ namespace MeshEkran
             row["dbName"] = "Lütfen veritabanını seçiniz.";
             dt.Rows.InsertAt(row, 0);
 
-            
+
             comboBox1.DataSource = dt;
             comboBox1.ValueMember = "dbID";
             comboBox1.DisplayMember = "dbName";
             baglanti.Close();
 
-            
+
         }
         #endregion
 

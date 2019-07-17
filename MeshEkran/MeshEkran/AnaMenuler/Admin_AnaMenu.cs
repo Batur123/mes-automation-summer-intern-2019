@@ -26,6 +26,8 @@ namespace MeshEkran
             MakinelerGrid();
             OperasyonlarGrid();
             UrunlerListesiGrid();
+            UrunIDBox.Enabled = false;
+            SOperatorIDBox.Enabled = false;
 
         }
         #endregion
@@ -167,7 +169,7 @@ namespace MeshEkran
 
             try
             {
-                using (var connection = MeshEkran.Veritabani.Database.GetConnection())
+                using (var connection = Veritabani.Database.GetConnection())
                 {
 
                     var select = "SELECT * FROM UrunTablosu";
@@ -202,13 +204,6 @@ namespace MeshEkran
                 MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
 
             }
-        }
-        #endregion
-
-        #region ProgramiKapatmaEvent
-        private void KapatButon_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
         #endregion
 
@@ -260,7 +255,7 @@ namespace MeshEkran
         {
             try
             {
-                if (MakineAdText.Text == "" && MakineKoduText.Text == "" && OperasyonIDText.Text == "")
+                if (MakineAdiBox.Text == "" && MakineKoduBox.Text == "" && MakineOperasyonIDBox.Text == "")
                 {
                     MessageBox.Show("Lütfen boş kısım bırakmayınız.");
                 }
@@ -270,9 +265,9 @@ namespace MeshEkran
                     MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
                     MasDLL.Rapor giris = new MasDLL.Rapor
                     {
-                        MakineAdi = MakineAdText.Text,
-                        MakineKodu = MakineKoduText.Text,
-                        OperasyonID = Convert.ToInt32(OperasyonIDText.Text)
+                        MakineAdi = MakineAdiBox.Text,
+                        MakineKodu = MakineKoduBox.Text,
+                        OperasyonID = Convert.ToInt32(MakineOperasyonIDBox.Text)
                     };
 
 
@@ -305,9 +300,9 @@ namespace MeshEkran
             MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
             MasDLL.Rapor giris = new MasDLL.Rapor();
 
-            textBox16.Text = MeshEkran.Classlar.SQLIslemleri.PSoperasyonid;
-            textBox17.Text = MeshEkran.Classlar.SQLIslemleri.PSkodu;
-            textBox18.Text = MeshEkran.Classlar.SQLIslemleri.PSid;
+           // textBox16.Text = MeshEkran.Classlar.SQLIslemleri.PSoperasyonid;
+          //  textBox17.Text = MeshEkran.Classlar.SQLIslemleri.PSkodu;
+          //  textBox18.Text = MeshEkran.Classlar.SQLIslemleri.PSid;
 
             if (MakineIDBox.Text == "")
             {
@@ -392,13 +387,59 @@ namespace MeshEkran
         }
         #endregion
 
-        #region OperatorlerGrid CellClick Eventi
+        #region DataGridView'ların CellClick Eventleri
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.OperatorlerGrid.Rows[e.RowIndex];
+                label2.Text = row.Cells[0].Value.ToString();
+                SOperatorIDBox.Text = row.Cells[0].Value.ToString();
+                EAdBox.Text = row.Cells[1].Value.ToString();
+                ESoyadBox.Text = row.Cells[2].Value.ToString();
+                DogumDateTimeBox.Text = row.Cells[4].Value.ToString();
+                ESicilNoBox.Text = row.Cells[5].Value.ToString();
+                EDurumBox.Text = row.Cells[8].Value.ToString();
+                IstenCikisDateTimeBox.Text = row.Cells[6].Value.ToString();
+            }
+        }
+
+        private void UrunlerGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.UrunlerGrid.Rows[e.RowIndex];
+                UrunIDBox.Text = row.Cells[0].Value.ToString();
+                UrunAdiBox.Text = row.Cells[1].Value.ToString();
+                UrunAciklamaBox.Text = row.Cells[2].Value.ToString();
+                UrunKoduBox.Text = row.Cells[3].Value.ToString();
+                UrunEnBox.Text = row.Cells[4].Value.ToString();
+                UrunBoyBox.Text = row.Cells[5].Value.ToString();
+            }
+        }
+
+        private void MakineGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.MakineGrid.Rows[e.RowIndex];
+                label2.Text = row.Cells[0].Value.ToString();
+                SOperatorIDBox.Text = row.Cells[0].Value.ToString();
+                EAdBox.Text = row.Cells[1].Value.ToString();
+                ESoyadBox.Text = row.Cells[2].Value.ToString();
+                DogumDateTimeBox.Text = row.Cells[4].Value.ToString();
+                ESicilNoBox.Text = row.Cells[5].Value.ToString();
+                EDurumBox.Text = row.Cells[8].Value.ToString();
+                IstenCikisDateTimeBox.Text = row.Cells[6].Value.ToString();
+            }
+        }
+
+        private void OperasyonGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.OperasyonGrid.Rows[e.RowIndex];
                 label2.Text = row.Cells[0].Value.ToString();
                 SOperatorIDBox.Text = row.Cells[0].Value.ToString();
                 EAdBox.Text = row.Cells[1].Value.ToString();
@@ -423,12 +464,12 @@ namespace MeshEkran
                 else
                 {
 
-                    MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                    Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
                     MasDLL.Rapor giris = new MasDLL.Rapor
                     {
-                        MakineAdi = MakineAdText.Text,
-                        MakineKodu = MakineKoduText.Text,
-                        OperasyonID = Convert.ToInt32(OperasyonIDText.Text)
+                        MakineAdi = MakineAdiBox.Text,
+                        MakineKodu = MakineKoduBox.Text,
+                        OperasyonID = Convert.ToInt32(MakineOperasyonIDBox.Text)
                     };
 
 
@@ -510,12 +551,12 @@ namespace MeshEkran
                     else
                     {
 
-                        MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                        Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
                         KullaniciDLL.Operator giris = new KullaniciDLL.Operator
                         {
                             DurumAP = 0,
                             OperatorID = Convert.ToInt32(label2.Text),
-                            Isim = MakineKoduText.Text,
+                            Isim = MakineKoduBox.Text,
                             Soyisim = ESoyadBox.Text,
                             DogumTarihi = DogumDateTimeBox.Value,
                             //DateTime.Parse(DogumDateTimeBox,System.Globalization.CultureInfo.InvariantCulture);
@@ -542,12 +583,12 @@ namespace MeshEkran
                     else
                     {
 
-                        MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
+                        Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
                         KullaniciDLL.Operator giris = new KullaniciDLL.Operator
                         {
                             DurumAP = 1,
                             OperatorID = Convert.ToInt32(label2.Text),
-                            Isim = MakineKoduText.Text,
+                            Isim = MakineKoduBox.Text,
                             Soyisim = ESoyadBox.Text,
                             DogumTarihi = DogumDateTimeBox.Value,
                             SicilNO = ESicilNoBox.Text
@@ -576,7 +617,7 @@ namespace MeshEkran
 
         #endregion
 
-        #region OperatorTabPageClickEventListesi
+        #region TabPageClickEventListesi
         private void TabControl3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl3.SelectedTab == tabControl3.TabPages["tabPage17"]) //ekleme
@@ -630,6 +671,47 @@ namespace MeshEkran
             }
         }
 
+        private void TabControl5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl5.SelectedTab == tabControl5.TabPages["tabPage20"]) //ekleme
+            {
+
+                TextBoxTemizle(this);
+                UrunIDBox.Enabled = false;
+                UrunKoduBox.Enabled = true;
+                UrunAciklamaBox.Enabled = true;
+                UrunEnBox.Enabled = true;
+                UrunBoyBox.Enabled = true;
+                UrunAdiBox.Enabled = true;
+
+
+            }
+            if (tabControl5.SelectedTab == tabControl5.TabPages["tabPage21"]) //silme
+            {
+
+                TextBoxTemizle(this);
+                UrunIDBox.Enabled = false;
+                UrunKoduBox.Enabled = true;
+                UrunAciklamaBox.Enabled = false;
+                UrunEnBox.Enabled = false;
+                UrunBoyBox.Enabled = false;
+                UrunAdiBox.Enabled = false;
+
+            }
+            if (tabControl5.SelectedTab == tabControl5.TabPages["tabPage22"]) //güncelleme
+            {
+
+                TextBoxTemizle(this);
+                UrunIDBox.Enabled = false;
+                UrunKoduBox.Enabled = false;
+                UrunAciklamaBox.Enabled = true;
+                UrunEnBox.Enabled = true;
+                UrunBoyBox.Enabled = true;
+                UrunAdiBox.Enabled = true;
+
+            }
+        }
+
         #endregion
 
         #region ÜrünEklemeButonEvent
@@ -638,7 +720,7 @@ namespace MeshEkran
 
             try
             {
-                if (urunaciklamabox.Text == "" && urunadibox.Text == "" && urunkodubox.Text == "" && enbox.Text == "" && boybox.Text == "")
+                if (UrunAciklamaBox.Text == "" && UrunAdiBox.Text == "" && UrunKoduBox.Text == "" && UrunEnBox.Text == "" && UrunBoyBox.Text == "")
                 {
                     MessageBox.Show("Lütfen boş kısım bırakmayınız.");
                 }
@@ -648,11 +730,11 @@ namespace MeshEkran
                     MeshEkran.Classlar.SQLIslemleri islem = new MeshEkran.Classlar.SQLIslemleri();
                     MasDLL.Rapor giris = new MasDLL.Rapor
                     {
-                        UrunAciklama = urunaciklamabox.Text,
-                        UrunAdi = urunadibox.Text,
-                        UrunKodu = urunkodubox.Text,
-                        UrunEn = Convert.ToInt32(enbox.Text),
-                        UrunBoy = Convert.ToInt32(boybox.Text),
+                        UrunAciklama = UrunAciklamaBox.Text,
+                        UrunAdi = UrunAdiBox.Text,
+                        UrunKodu = UrunKoduBox.Text,
+                        UrunEn = Convert.ToInt32(UrunEnBox.Text),
+                        UrunBoy = Convert.ToInt32(UrunBoyBox.Text),
                     };
 
 
@@ -684,7 +766,7 @@ namespace MeshEkran
 
             try
             {
-                if (UrunKoduSBox.Text == "")
+                if (UrunKoduBox.Text == "")
                 {
                     MessageBox.Show("Lütfen Ürün Kodu isimli kutucuğu boş bırakmayınız. Aksi takdirde silme işlemi yapamayacaksınız.");
                 }
@@ -694,7 +776,7 @@ namespace MeshEkran
                     Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
                     MasDLL.Rapor giris = new MasDLL.Rapor
                     {
-                        UrunKodu = UrunKoduSBox.Text,
+                        UrunKodu = UrunKoduBox.Text,
                     };
 
 
@@ -716,10 +798,11 @@ namespace MeshEkran
         }
         #endregion
 
+        #region ÜrünGüncellemeButonEvent
         private void UrunGuncelleBtn_Click(object sender, EventArgs e)
         {
          
-            if (GUrunAcikBox.Text == "" && GUrunAdiBox.Text == "" && GUrunKoduBox.Text == "" && GUrunIDBox.Text == "" & GUrunBoyBox.Text == "" & GUrunEnBox.Text == "")
+            if (UrunEnBox.Text == "" && UrunBoyBox.Text == "" && UrunAciklamaBox.Text == "" && UrunAdiBox.Text == "" & UrunKoduBox.Text == "" & UrunIDBox.Text == "")
             {
                 MessageBox.Show("Lütfen boş kısım bırakmayınız.");
             }
@@ -729,12 +812,12 @@ namespace MeshEkran
                 Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
                 MasDLL.Rapor giris = new MasDLL.Rapor
                 {
-                    UrunID = Convert.ToInt32(GUrunIDBox.Text),
-                    UrunAdi = GUrunAdiBox.Text,
-                    UrunKodu = GUrunKoduBox.Text,
-                    UrunAciklama = GUrunAcikBox.Text,
-                    UrunBoy = Convert.ToInt32(GUrunBoyBox.Text),
-                    UrunEn = Convert.ToInt32(GUrunEnBox.Text)
+                    UrunID = Convert.ToInt32(UrunIDBox.Text),
+                    UrunAdi = UrunAdiBox.Text,
+                    UrunKodu = UrunKoduBox.Text,
+                    UrunAciklama = UrunAciklamaBox.Text,
+                    UrunBoy = Convert.ToInt32(UrunBoyBox.Text),
+                    UrunEn = Convert.ToInt32(UrunEnBox.Text)
                 };
 
                 if (islem.UrunGuncelleme(giris))
@@ -743,6 +826,34 @@ namespace MeshEkran
                     UrunlerListesiGrid();
                 }
             }
+            UrunlerListesiGrid();
+        }
+
+
+        #endregion
+
+        #region Programı Yenile
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            OperatorGrid();
+            MakinelerGrid();
+            UrunlerListesiGrid();
+            OperasyonlarGrid();
+            
+        }
+        #endregion
+
+        #region ProgramiKapatmaEvent
+        private void KapatButon_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            InitializeComponent();
         }
     }
 }

@@ -438,11 +438,11 @@ namespace MeshEkran.Classlar
                     if (DialogResult.Yes == durum)
                     {
 
-                        string kayit = "UPDATE UrunTablosu SET UrunAdi=@urunad,UrunAciklama=@urunaciklama,UrunKodu=@urunkodu,En=@urunen,Boy=@urunboy where UrunKodu=@urunkod";
+                        string kayit = "UPDATE UrunTablosu SET UrunAdi=@urunad,UrunAciklama=@urunaciklama,En=@urunen,Boy=@urunboy where UrunKodu=@urunkod";
                         SqlCommand komut = new SqlCommand(kayit, baglanti);
                         komut.Parameters.AddWithValue("@urunad", degisken.UrunAdi);
                         komut.Parameters.AddWithValue("@urunaciklama", degisken.UrunAciklama);
-                        komut.Parameters.AddWithValue("@urunkodu", degisken.UrunKodu);
+                        komut.Parameters.AddWithValue("@urunkod", degisken.UrunKodu);
                         komut.Parameters.AddWithValue("@urunen", degisken.UrunEn);
                         komut.Parameters.AddWithValue("@urunboy", degisken.UrunBoy);
                         komut.ExecuteNonQuery();
