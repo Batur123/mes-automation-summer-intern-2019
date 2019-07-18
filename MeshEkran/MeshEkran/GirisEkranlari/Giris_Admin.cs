@@ -72,7 +72,7 @@ namespace MeshEkran
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        /*private void Button1_Click(object sender, EventArgs e)
         {
             
             Metotlar.Ok("Naber", "İstenirse Title yazılır");
@@ -98,6 +98,6 @@ namespace MeshEkran
                 Metotlar.No("İşlem kullanıcı tarafından iptal edildi.","İŞLEM İPTAL");
             }
 
-        }
+        } */
     }
 }

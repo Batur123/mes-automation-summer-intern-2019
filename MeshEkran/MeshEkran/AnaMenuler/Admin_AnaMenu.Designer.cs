@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_AnaMenu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,15 +70,16 @@
             this.MakineAdiBox = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.MakineKoduBox = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.MakineEkleBtn = new System.Windows.Forms.Button();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.MakineSilBtn = new System.Windows.Forms.Button();
             this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.MakineGuncelleBtn = new System.Windows.Forms.Button();
             this.OperasyonGrid = new System.Windows.Forms.DataGridView();
             this.MakineGrid = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -145,8 +152,48 @@
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabControl17 = new System.Windows.Forms.TabControl();
+            this.tabPage44 = new System.Windows.Forms.TabPage();
+            this.OperasyonIDMainBox = new System.Windows.Forms.TextBox();
+            this.OperasyonAdiMainBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tabControl18 = new System.Windows.Forms.TabControl();
+            this.tabPage45 = new System.Windows.Forms.TabPage();
+            this.OpMainEkle_Btn = new System.Windows.Forms.Button();
+            this.tabPage46 = new System.Windows.Forms.TabPage();
+            this.OpMainSil_Btn = new System.Windows.Forms.Button();
+            this.tabPage47 = new System.Windows.Forms.TabPage();
+            this.OpMainGuncelle_Btn = new System.Windows.Forms.Button();
+            this.OperasyonlarMainGrid = new System.Windows.Forms.DataGridView();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabControl15 = new System.Windows.Forms.TabControl();
+            this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.DurusAciklamaBox = new System.Windows.Forms.RichTextBox();
+            this.DurusIDBox = new System.Windows.Forms.TextBox();
+            this.DurusAdBox = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.DurusTab = new System.Windows.Forms.TabControl();
+            this.tabPage41 = new System.Windows.Forms.TabPage();
+            this.DurusEkle_Btn = new System.Windows.Forms.Button();
+            this.tabPage42 = new System.Windows.Forms.TabPage();
+            this.DurusGuncelle_Btn = new System.Windows.Forms.Button();
+            this.tabPage43 = new System.Windows.Forms.TabPage();
+            this.DurusSil_Btn = new System.Windows.Forms.Button();
+            this.DurusGrid = new System.Windows.Forms.DataGridView();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabControl14 = new System.Windows.Forms.TabControl();
+            this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.tabPage38 = new System.Windows.Forms.TabPage();
+            this.tabPage39 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -183,6 +230,7 @@
             this.OperatorlerGrid = new System.Windows.Forms.DataGridView();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.button10 = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -192,33 +240,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tabControl14 = new System.Windows.Forms.TabControl();
-            this.tabPage36 = new System.Windows.Forms.TabPage();
-            this.tabPage37 = new System.Windows.Forms.TabPage();
-            this.tabPage38 = new System.Windows.Forms.TabPage();
-            this.tabPage39 = new System.Windows.Forms.TabPage();
-            this.tabControl15 = new System.Windows.Forms.TabControl();
-            this.tabPage40 = new System.Windows.Forms.TabPage();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.tabControl16 = new System.Windows.Forms.TabControl();
-            this.tabPage41 = new System.Windows.Forms.TabPage();
-            this.tabPage42 = new System.Windows.Forms.TabPage();
-            this.tabPage43 = new System.Windows.Forms.TabPage();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -231,9 +252,10 @@
             this.tabPage3.SuspendLayout();
             this.tabControl13.SuspendLayout();
             this.tabPage35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tabControl2.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            this.tabPage15.SuspendLayout();
+            this.tabPage23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OperasyonGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MakineGrid)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -266,8 +288,25 @@
             this.tabControl12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            this.tabControl17.SuspendLayout();
+            this.tabPage44.SuspendLayout();
+            this.tabControl18.SuspendLayout();
+            this.tabPage45.SuspendLayout();
+            this.tabPage46.SuspendLayout();
+            this.tabPage47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OperasyonlarMainGrid)).BeginInit();
             this.tabPage9.SuspendLayout();
+            this.tabControl15.SuspendLayout();
+            this.tabPage40.SuspendLayout();
+            this.DurusTab.SuspendLayout();
+            this.tabPage41.SuspendLayout();
+            this.tabPage42.SuspendLayout();
+            this.tabPage43.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DurusGrid)).BeginInit();
             this.tabPage10.SuspendLayout();
+            this.tabControl14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage11.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage19.SuspendLayout();
@@ -281,15 +320,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.tabControl14.SuspendLayout();
-            this.tabControl15.SuspendLayout();
-            this.tabPage40.SuspendLayout();
-            this.tabControl16.SuspendLayout();
-            this.tabPage41.SuspendLayout();
-            this.tabPage42.SuspendLayout();
-            this.tabPage43.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -310,11 +340,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1330, 578);
+            this.tabControl1.Size = new System.Drawing.Size(1360, 755);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.button1);
@@ -322,34 +354,54 @@
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.dateTimePicker2);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage1.Size = new System.Drawing.Size(1352, 729);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Rapor Tablosu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(57, 147);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(87, 18);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Rapor Türü:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(150, 147);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 28);
+            this.comboBox1.TabIndex = 7;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 138);
+            this.dataGridView2.Location = new System.Drawing.Point(17, 246);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(531, 397);
+            this.dataGridView2.Size = new System.Drawing.Size(614, 467);
             this.dataGridView2.TabIndex = 6;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(575, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(650, 23);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(726, 512);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 690);
             this.dataGridView1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(214, 81);
+            this.button1.Location = new System.Drawing.Point(150, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(213, 35);
             this.button1.TabIndex = 4;
@@ -360,7 +412,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(128, 51);
+            this.label7.Location = new System.Drawing.Point(64, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 18);
             this.label7.TabIndex = 3;
@@ -370,7 +422,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(92, 23);
+            this.label6.Location = new System.Drawing.Point(28, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 18);
             this.label6.TabIndex = 2;
@@ -379,7 +431,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(214, 51);
+            this.dateTimePicker2.Location = new System.Drawing.Point(150, 117);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(213, 24);
             this.dateTimePicker2.TabIndex = 1;
@@ -387,7 +439,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(214, 23);
+            this.dateTimePicker1.Location = new System.Drawing.Point(150, 89);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(213, 24);
             this.dateTimePicker1.TabIndex = 0;
@@ -398,7 +450,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage2.Size = new System.Drawing.Size(1352, 729);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Operatör Kontrol Ekranı";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -406,10 +458,10 @@
             // tabControl8
             // 
             this.tabControl8.Controls.Add(this.tabPage26);
-            this.tabControl8.Location = new System.Drawing.Point(53, 21);
+            this.tabControl8.Location = new System.Drawing.Point(49, 84);
             this.tabControl8.Name = "tabControl8";
             this.tabControl8.SelectedIndex = 0;
-            this.tabControl8.Size = new System.Drawing.Size(371, 514);
+            this.tabControl8.Size = new System.Drawing.Size(371, 523);
             this.tabControl8.TabIndex = 0;
             // 
             // tabPage26
@@ -432,7 +484,7 @@
             this.tabPage26.Location = new System.Drawing.Point(4, 22);
             this.tabPage26.Name = "tabPage26";
             this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage26.Size = new System.Drawing.Size(363, 488);
+            this.tabPage26.Size = new System.Drawing.Size(363, 497);
             this.tabPage26.TabIndex = 0;
             this.tabPage26.Text = "asdasd";
             this.tabPage26.UseVisualStyleBackColor = true;
@@ -545,7 +597,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::MeshEkran.Properties.Resources.icon_ios7_gear_512;
-            this.pictureBox6.Location = new System.Drawing.Point(11, 385);
+            this.pictureBox6.Location = new System.Drawing.Point(15, 395);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(104, 94);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -590,7 +642,7 @@
             this.tabPage3.Controls.Add(this.MakineGrid);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage3.Size = new System.Drawing.Size(1352, 729);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Makine Listesi";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -599,10 +651,10 @@
             // 
             this.tabControl13.Controls.Add(this.tabPage35);
             this.tabControl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.tabControl13.Location = new System.Drawing.Point(13, 165);
+            this.tabControl13.Location = new System.Drawing.Point(85, 258);
             this.tabControl13.Name = "tabControl13";
             this.tabControl13.SelectedIndex = 0;
-            this.tabControl13.Size = new System.Drawing.Size(443, 295);
+            this.tabControl13.Size = new System.Drawing.Size(443, 233);
             this.tabControl13.TabIndex = 25;
             // 
             // tabPage35
@@ -612,36 +664,38 @@
             this.tabPage35.Controls.Add(this.MakineAdiBox);
             this.tabPage35.Controls.Add(this.label53);
             this.tabPage35.Controls.Add(this.label52);
-            this.tabPage35.Controls.Add(this.pictureBox7);
             this.tabPage35.Controls.Add(this.MakineKoduBox);
-            this.tabPage35.Controls.Add(this.pictureBox8);
             this.tabPage35.Controls.Add(this.label51);
             this.tabPage35.Controls.Add(this.label50);
             this.tabPage35.Location = new System.Drawing.Point(4, 33);
             this.tabPage35.Name = "tabPage35";
             this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage35.Size = new System.Drawing.Size(435, 258);
+            this.tabPage35.Size = new System.Drawing.Size(435, 196);
             this.tabPage35.TabIndex = 0;
             this.tabPage35.Text = "Makine";
             this.tabPage35.UseVisualStyleBackColor = true;
             // 
             // MakineOperasyonIDBox
             // 
+            this.MakineOperasyonIDBox.Enabled = false;
             this.MakineOperasyonIDBox.Location = new System.Drawing.Point(173, 129);
             this.MakineOperasyonIDBox.Multiline = true;
             this.MakineOperasyonIDBox.Name = "MakineOperasyonIDBox";
             this.MakineOperasyonIDBox.ShortcutsEnabled = false;
             this.MakineOperasyonIDBox.Size = new System.Drawing.Size(202, 29);
             this.MakineOperasyonIDBox.TabIndex = 20;
+            this.MakineOperasyonIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MakineOperasyonIDBox_KeyPress);
             // 
             // MakineIDBox
             // 
+            this.MakineIDBox.Enabled = false;
             this.MakineIDBox.Location = new System.Drawing.Point(173, 24);
             this.MakineIDBox.Multiline = true;
             this.MakineIDBox.Name = "MakineIDBox";
             this.MakineIDBox.ShortcutsEnabled = false;
             this.MakineIDBox.Size = new System.Drawing.Size(202, 29);
             this.MakineIDBox.TabIndex = 24;
+            this.MakineIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MakineIDBox_KeyPress_1);
             // 
             // MakineAdiBox
             // 
@@ -670,16 +724,6 @@
             this.label52.TabIndex = 15;
             this.label52.Text = "Makine Adı:";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::MeshEkran.Properties.Resources.CancelIcon;
-            this.pictureBox7.Location = new System.Drawing.Point(276, 164);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(85, 62);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            // 
             // MakineKoduBox
             // 
             this.MakineKoduBox.Location = new System.Drawing.Point(173, 94);
@@ -688,16 +732,6 @@
             this.MakineKoduBox.ShortcutsEnabled = false;
             this.MakineKoduBox.Size = new System.Drawing.Size(202, 29);
             this.MakineKoduBox.TabIndex = 18;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::MeshEkran.Properties.Resources.Ok_256256;
-            this.pictureBox8.Location = new System.Drawing.Point(185, 164);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(85, 62);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 21;
-            this.pictureBox8.TabStop = false;
             // 
             // label51
             // 
@@ -723,16 +757,18 @@
             this.tabControl2.Controls.Add(this.tabPage15);
             this.tabControl2.Controls.Add(this.tabPage23);
             this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabControl2.Location = new System.Drawing.Point(13, 21);
+            this.tabControl2.Location = new System.Drawing.Point(85, 114);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(443, 138);
             this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl2.TabIndex = 13;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.TabControl2_SelectedIndexChanged);
             // 
             // tabPage14
             // 
             this.tabPage14.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage14.Controls.Add(this.MakineEkleBtn);
             this.tabPage14.Location = new System.Drawing.Point(4, 33);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
@@ -740,9 +776,21 @@
             this.tabPage14.TabIndex = 0;
             this.tabPage14.Text = "Makine Ekle";
             // 
+            // MakineEkleBtn
+            // 
+            this.MakineEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MakineEkleBtn.Location = new System.Drawing.Point(84, 30);
+            this.MakineEkleBtn.Name = "MakineEkleBtn";
+            this.MakineEkleBtn.Size = new System.Drawing.Size(264, 35);
+            this.MakineEkleBtn.TabIndex = 0;
+            this.MakineEkleBtn.Text = "Makineyi Ekle";
+            this.MakineEkleBtn.UseVisualStyleBackColor = true;
+            this.MakineEkleBtn.Click += new System.EventHandler(this.MakineEkleBtn_Click);
+            // 
             // tabPage15
             // 
             this.tabPage15.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage15.Controls.Add(this.MakineSilBtn);
             this.tabPage15.Location = new System.Drawing.Point(4, 33);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
@@ -750,14 +798,37 @@
             this.tabPage15.TabIndex = 1;
             this.tabPage15.Text = "Makine Sil";
             // 
+            // MakineSilBtn
+            // 
+            this.MakineSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MakineSilBtn.Location = new System.Drawing.Point(84, 30);
+            this.MakineSilBtn.Name = "MakineSilBtn";
+            this.MakineSilBtn.Size = new System.Drawing.Size(264, 35);
+            this.MakineSilBtn.TabIndex = 26;
+            this.MakineSilBtn.Text = "Makineyi Sil";
+            this.MakineSilBtn.UseVisualStyleBackColor = true;
+            this.MakineSilBtn.Click += new System.EventHandler(this.MakineSilBtn_Click);
+            // 
             // tabPage23
             // 
             this.tabPage23.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage23.Controls.Add(this.MakineGuncelleBtn);
             this.tabPage23.Location = new System.Drawing.Point(4, 33);
             this.tabPage23.Name = "tabPage23";
             this.tabPage23.Size = new System.Drawing.Size(435, 101);
             this.tabPage23.TabIndex = 2;
             this.tabPage23.Text = "Makine Güncelle";
+            // 
+            // MakineGuncelleBtn
+            // 
+            this.MakineGuncelleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MakineGuncelleBtn.Location = new System.Drawing.Point(84, 30);
+            this.MakineGuncelleBtn.Name = "MakineGuncelleBtn";
+            this.MakineGuncelleBtn.Size = new System.Drawing.Size(264, 35);
+            this.MakineGuncelleBtn.TabIndex = 27;
+            this.MakineGuncelleBtn.Text = "Makineyi Güncelle";
+            this.MakineGuncelleBtn.UseVisualStyleBackColor = true;
+            this.MakineGuncelleBtn.Click += new System.EventHandler(this.MakineGuncelleBtn_Click);
             // 
             // OperasyonGrid
             // 
@@ -768,11 +839,11 @@
             this.OperasyonGrid.AllowUserToResizeRows = false;
             this.OperasyonGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.OperasyonGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OperasyonGrid.Location = new System.Drawing.Point(1111, 21);
+            this.OperasyonGrid.Location = new System.Drawing.Point(1118, 18);
             this.OperasyonGrid.Name = "OperasyonGrid";
             this.OperasyonGrid.ReadOnly = true;
             this.OperasyonGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.OperasyonGrid.Size = new System.Drawing.Size(194, 515);
+            this.OperasyonGrid.Size = new System.Drawing.Size(215, 690);
             this.OperasyonGrid.TabIndex = 8;
             this.OperasyonGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OperasyonGrid_CellClick);
             // 
@@ -785,11 +856,11 @@
             this.MakineGrid.AllowUserToResizeRows = false;
             this.MakineGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MakineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MakineGrid.Location = new System.Drawing.Point(659, 21);
+            this.MakineGrid.Location = new System.Drawing.Point(654, 18);
             this.MakineGrid.Name = "MakineGrid";
             this.MakineGrid.ReadOnly = true;
             this.MakineGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MakineGrid.Size = new System.Drawing.Size(446, 515);
+            this.MakineGrid.Size = new System.Drawing.Size(446, 690);
             this.MakineGrid.TabIndex = 1;
             this.MakineGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MakineGrid_CellClick);
             // 
@@ -801,7 +872,7 @@
             this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage4.Size = new System.Drawing.Size(1352, 729);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Alıcı Listesi";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -850,6 +921,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(152, 31);
             this.textBox8.TabIndex = 9;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox8_KeyPress_1);
             // 
             // textBox7
             // 
@@ -858,6 +930,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(152, 30);
             this.textBox7.TabIndex = 5;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox7_KeyPress_1);
             // 
             // label38
             // 
@@ -965,9 +1038,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(16, 504);
+            this.button2.Location = new System.Drawing.Point(484, 306);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 33);
+            this.button2.Size = new System.Drawing.Size(309, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "Siparişleri Göster";
             this.button2.UseVisualStyleBackColor = true;
@@ -977,7 +1050,7 @@
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(16, 20);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(440, 478);
+            this.dataGridView3.Size = new System.Drawing.Size(440, 695);
             this.dataGridView3.TabIndex = 0;
             // 
             // tabPage5
@@ -988,7 +1061,7 @@
             this.tabPage5.Controls.Add(this.UrunlerGrid);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage5.Size = new System.Drawing.Size(1352, 729);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Ürün Listesi";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1064,6 +1137,7 @@
             this.UrunIDBox.ShortcutsEnabled = false;
             this.UrunIDBox.Size = new System.Drawing.Size(202, 29);
             this.UrunIDBox.TabIndex = 30;
+            this.UrunIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UrunIDBox_KeyPress);
             // 
             // label5
             // 
@@ -1100,6 +1174,7 @@
             this.UrunBoyBox.ShortcutsEnabled = false;
             this.UrunBoyBox.Size = new System.Drawing.Size(202, 29);
             this.UrunBoyBox.TabIndex = 26;
+            this.UrunBoyBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UrunBoyBox_KeyPress);
             // 
             // UrunEnBox
             // 
@@ -1109,6 +1184,7 @@
             this.UrunEnBox.ShortcutsEnabled = false;
             this.UrunEnBox.Size = new System.Drawing.Size(202, 29);
             this.UrunEnBox.TabIndex = 25;
+            this.UrunEnBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UrunEnBox_KeyPress);
             // 
             // UrunKoduBox
             // 
@@ -1281,7 +1357,7 @@
             this.UrunlerGrid.Location = new System.Drawing.Point(639, 15);
             this.UrunlerGrid.Name = "UrunlerGrid";
             this.UrunlerGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.UrunlerGrid.Size = new System.Drawing.Size(669, 521);
+            this.UrunlerGrid.Size = new System.Drawing.Size(702, 698);
             this.UrunlerGrid.TabIndex = 2;
             this.UrunlerGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UrunlerGrid_CellClick);
             // 
@@ -1289,7 +1365,7 @@
             // 
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage6.Size = new System.Drawing.Size(1352, 729);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Üretim Raporu";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1302,7 +1378,7 @@
             this.tabPage7.Controls.Add(this.dataGridView4);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage7.Size = new System.Drawing.Size(1352, 729);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Sipariş Listesi";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1357,6 +1433,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(166, 34);
             this.textBox9.TabIndex = 2;
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox9_KeyPress);
             // 
             // label45
             // 
@@ -1376,6 +1453,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(166, 34);
             this.textBox10.TabIndex = 3;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox10_KeyPress);
             // 
             // label44
             // 
@@ -1395,6 +1473,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(166, 34);
             this.textBox11.TabIndex = 4;
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox11_KeyPress);
             // 
             // label42
             // 
@@ -1414,6 +1493,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(166, 34);
             this.textBox12.TabIndex = 5;
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox12_KeyPress);
             // 
             // label43
             // 
@@ -1514,24 +1594,384 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage8.Controls.Add(this.tabControl17);
+            this.tabPage8.Controls.Add(this.tabControl18);
+            this.tabPage8.Controls.Add(this.OperasyonlarMainGrid);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage8.Size = new System.Drawing.Size(1352, 729);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Operasyon Listesi";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabControl17
+            // 
+            this.tabControl17.Controls.Add(this.tabPage44);
+            this.tabControl17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.tabControl17.Location = new System.Drawing.Point(488, 509);
+            this.tabControl17.Name = "tabControl17";
+            this.tabControl17.SelectedIndex = 0;
+            this.tabControl17.Size = new System.Drawing.Size(468, 198);
+            this.tabControl17.TabIndex = 28;
+            // 
+            // tabPage44
+            // 
+            this.tabPage44.Controls.Add(this.OperasyonIDMainBox);
+            this.tabPage44.Controls.Add(this.OperasyonAdiMainBox);
+            this.tabPage44.Controls.Add(this.label17);
+            this.tabPage44.Controls.Add(this.label27);
+            this.tabPage44.Location = new System.Drawing.Point(4, 33);
+            this.tabPage44.Name = "tabPage44";
+            this.tabPage44.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage44.Size = new System.Drawing.Size(460, 161);
+            this.tabPage44.TabIndex = 0;
+            this.tabPage44.Text = "Operasyon";
+            this.tabPage44.UseVisualStyleBackColor = true;
+            // 
+            // OperasyonIDMainBox
+            // 
+            this.OperasyonIDMainBox.Enabled = false;
+            this.OperasyonIDMainBox.Location = new System.Drawing.Point(204, 43);
+            this.OperasyonIDMainBox.Multiline = true;
+            this.OperasyonIDMainBox.Name = "OperasyonIDMainBox";
+            this.OperasyonIDMainBox.ShortcutsEnabled = false;
+            this.OperasyonIDMainBox.Size = new System.Drawing.Size(202, 29);
+            this.OperasyonIDMainBox.TabIndex = 24;
+            this.OperasyonIDMainBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox20_KeyPress);
+            // 
+            // OperasyonAdiMainBox
+            // 
+            this.OperasyonAdiMainBox.Location = new System.Drawing.Point(204, 78);
+            this.OperasyonAdiMainBox.Multiline = true;
+            this.OperasyonAdiMainBox.Name = "OperasyonAdiMainBox";
+            this.OperasyonAdiMainBox.ShortcutsEnabled = false;
+            this.OperasyonAdiMainBox.Size = new System.Drawing.Size(202, 29);
+            this.OperasyonAdiMainBox.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(68, 43);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 24);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Operasyon ID:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(57, 78);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(141, 24);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "Operasyon Adı:";
+            // 
+            // tabControl18
+            // 
+            this.tabControl18.Controls.Add(this.tabPage45);
+            this.tabControl18.Controls.Add(this.tabPage46);
+            this.tabControl18.Controls.Add(this.tabPage47);
+            this.tabControl18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabControl18.Location = new System.Drawing.Point(488, 375);
+            this.tabControl18.Name = "tabControl18";
+            this.tabControl18.SelectedIndex = 0;
+            this.tabControl18.Size = new System.Drawing.Size(468, 117);
+            this.tabControl18.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl18.TabIndex = 27;
+            this.tabControl18.SelectedIndexChanged += new System.EventHandler(this.TabControl18_SelectedIndexChanged);
+            // 
+            // tabPage45
+            // 
+            this.tabPage45.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage45.Controls.Add(this.OpMainEkle_Btn);
+            this.tabPage45.Location = new System.Drawing.Point(4, 33);
+            this.tabPage45.Name = "tabPage45";
+            this.tabPage45.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage45.Size = new System.Drawing.Size(460, 80);
+            this.tabPage45.TabIndex = 0;
+            this.tabPage45.Text = "Operasyon Ekle";
+            // 
+            // OpMainEkle_Btn
+            // 
+            this.OpMainEkle_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.OpMainEkle_Btn.Location = new System.Drawing.Point(25, 14);
+            this.OpMainEkle_Btn.Name = "OpMainEkle_Btn";
+            this.OpMainEkle_Btn.Size = new System.Drawing.Size(411, 52);
+            this.OpMainEkle_Btn.TabIndex = 0;
+            this.OpMainEkle_Btn.Text = "Operasyon Ekle";
+            this.OpMainEkle_Btn.UseVisualStyleBackColor = true;
+            this.OpMainEkle_Btn.Click += new System.EventHandler(this.OpMainEkle_Btn_Click);
+            // 
+            // tabPage46
+            // 
+            this.tabPage46.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage46.Controls.Add(this.OpMainSil_Btn);
+            this.tabPage46.Location = new System.Drawing.Point(4, 33);
+            this.tabPage46.Name = "tabPage46";
+            this.tabPage46.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage46.Size = new System.Drawing.Size(460, 80);
+            this.tabPage46.TabIndex = 1;
+            this.tabPage46.Text = "Operasyon Sil";
+            // 
+            // OpMainSil_Btn
+            // 
+            this.OpMainSil_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.OpMainSil_Btn.Location = new System.Drawing.Point(25, 14);
+            this.OpMainSil_Btn.Name = "OpMainSil_Btn";
+            this.OpMainSil_Btn.Size = new System.Drawing.Size(411, 52);
+            this.OpMainSil_Btn.TabIndex = 26;
+            this.OpMainSil_Btn.Text = "Operasyon Sil";
+            this.OpMainSil_Btn.UseVisualStyleBackColor = true;
+            this.OpMainSil_Btn.Click += new System.EventHandler(this.OpMainSil_Btn_Click);
+            // 
+            // tabPage47
+            // 
+            this.tabPage47.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage47.Controls.Add(this.OpMainGuncelle_Btn);
+            this.tabPage47.Location = new System.Drawing.Point(4, 33);
+            this.tabPage47.Name = "tabPage47";
+            this.tabPage47.Size = new System.Drawing.Size(460, 80);
+            this.tabPage47.TabIndex = 2;
+            this.tabPage47.Text = "Operasyon Güncelle";
+            // 
+            // OpMainGuncelle_Btn
+            // 
+            this.OpMainGuncelle_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.OpMainGuncelle_Btn.Location = new System.Drawing.Point(25, 14);
+            this.OpMainGuncelle_Btn.Name = "OpMainGuncelle_Btn";
+            this.OpMainGuncelle_Btn.Size = new System.Drawing.Size(411, 52);
+            this.OpMainGuncelle_Btn.TabIndex = 27;
+            this.OpMainGuncelle_Btn.Text = "Operasyon Güncelle";
+            this.OpMainGuncelle_Btn.UseVisualStyleBackColor = true;
+            this.OpMainGuncelle_Btn.Click += new System.EventHandler(this.OpMainGuncelle_Btn_Click);
+            // 
+            // OperasyonlarMainGrid
+            // 
+            this.OperasyonlarMainGrid.AllowUserToAddRows = false;
+            this.OperasyonlarMainGrid.AllowUserToDeleteRows = false;
+            this.OperasyonlarMainGrid.AllowUserToOrderColumns = true;
+            this.OperasyonlarMainGrid.AllowUserToResizeColumns = false;
+            this.OperasyonlarMainGrid.AllowUserToResizeRows = false;
+            this.OperasyonlarMainGrid.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.OperasyonlarMainGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OperasyonlarMainGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.OperasyonlarMainGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OperasyonlarMainGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.OperasyonlarMainGrid.Location = new System.Drawing.Point(203, 22);
+            this.OperasyonlarMainGrid.Name = "OperasyonlarMainGrid";
+            this.OperasyonlarMainGrid.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OperasyonlarMainGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.OperasyonlarMainGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.OperasyonlarMainGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.OperasyonlarMainGrid.Size = new System.Drawing.Size(969, 347);
+            this.OperasyonlarMainGrid.TabIndex = 26;
+            this.OperasyonlarMainGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OperasyonlarMainGrid_CellClick);
             // 
             // tabPage9
             // 
+            this.tabPage9.BackColor = System.Drawing.Color.Transparent;
             this.tabPage9.Controls.Add(this.tabControl15);
-            this.tabPage9.Controls.Add(this.tabControl16);
-            this.tabPage9.Controls.Add(this.dataGridView6);
+            this.tabPage9.Controls.Add(this.DurusTab);
+            this.tabPage9.Controls.Add(this.DurusGrid);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage9.Size = new System.Drawing.Size(1352, 729);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Duruş Listesi";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // tabControl15
+            // 
+            this.tabControl15.Controls.Add(this.tabPage40);
+            this.tabControl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabControl15.Location = new System.Drawing.Point(344, 509);
+            this.tabControl15.Name = "tabControl15";
+            this.tabControl15.SelectedIndex = 0;
+            this.tabControl15.Size = new System.Drawing.Size(745, 220);
+            this.tabControl15.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl15.TabIndex = 18;
+            // 
+            // tabPage40
+            // 
+            this.tabPage40.Controls.Add(this.DurusAciklamaBox);
+            this.tabPage40.Controls.Add(this.DurusIDBox);
+            this.tabPage40.Controls.Add(this.DurusAdBox);
+            this.tabPage40.Controls.Add(this.label28);
+            this.tabPage40.Controls.Add(this.label54);
+            this.tabPage40.Controls.Add(this.label55);
+            this.tabPage40.Location = new System.Drawing.Point(4, 29);
+            this.tabPage40.Name = "tabPage40";
+            this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage40.Size = new System.Drawing.Size(737, 187);
+            this.tabPage40.TabIndex = 0;
+            this.tabPage40.Text = "Duruş Bilgileri";
+            this.tabPage40.UseVisualStyleBackColor = true;
+            // 
+            // DurusAciklamaBox
+            // 
+            this.DurusAciklamaBox.Location = new System.Drawing.Point(458, 26);
+            this.DurusAciklamaBox.Name = "DurusAciklamaBox";
+            this.DurusAciklamaBox.Size = new System.Drawing.Size(261, 154);
+            this.DurusAciklamaBox.TabIndex = 11;
+            this.DurusAciklamaBox.Text = "";
+            // 
+            // DurusIDBox
+            // 
+            this.DurusIDBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusIDBox.Location = new System.Drawing.Point(105, 29);
+            this.DurusIDBox.Multiline = true;
+            this.DurusIDBox.Name = "DurusIDBox";
+            this.DurusIDBox.Size = new System.Drawing.Size(204, 34);
+            this.DurusIDBox.TabIndex = 2;
+            this.DurusIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox18_KeyPress);
+            // 
+            // DurusAdBox
+            // 
+            this.DurusAdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusAdBox.Location = new System.Drawing.Point(105, 69);
+            this.DurusAdBox.Multiline = true;
+            this.DurusAdBox.Name = "DurusAdBox";
+            this.DurusAdBox.Size = new System.Drawing.Size(204, 34);
+            this.DurusAdBox.TabIndex = 3;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label28.Location = new System.Drawing.Point(328, 29);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(124, 20);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "Duruş Açıklama:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label54.Location = new System.Drawing.Point(16, 69);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(83, 20);
+            this.label54.TabIndex = 9;
+            this.label54.Text = "Duruş AD:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label55.Location = new System.Drawing.Point(22, 29);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(77, 20);
+            this.label55.TabIndex = 8;
+            this.label55.Text = "Duruş ID:";
+            // 
+            // DurusTab
+            // 
+            this.DurusTab.Controls.Add(this.tabPage41);
+            this.DurusTab.Controls.Add(this.tabPage42);
+            this.DurusTab.Controls.Add(this.tabPage43);
+            this.DurusTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusTab.Location = new System.Drawing.Point(497, 402);
+            this.DurusTab.Name = "DurusTab";
+            this.DurusTab.SelectedIndex = 0;
+            this.DurusTab.Size = new System.Drawing.Size(433, 105);
+            this.DurusTab.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.DurusTab.TabIndex = 17;
+            this.DurusTab.SelectedIndexChanged += new System.EventHandler(this.DurusTab_SelectedIndexChanged);
+            // 
+            // tabPage41
+            // 
+            this.tabPage41.Controls.Add(this.DurusEkle_Btn);
+            this.tabPage41.Location = new System.Drawing.Point(4, 29);
+            this.tabPage41.Name = "tabPage41";
+            this.tabPage41.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage41.Size = new System.Drawing.Size(425, 72);
+            this.tabPage41.TabIndex = 0;
+            this.tabPage41.Text = "Duruş Ekle";
+            this.tabPage41.UseVisualStyleBackColor = true;
+            // 
+            // DurusEkle_Btn
+            // 
+            this.DurusEkle_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusEkle_Btn.Location = new System.Drawing.Point(128, 18);
+            this.DurusEkle_Btn.Name = "DurusEkle_Btn";
+            this.DurusEkle_Btn.Size = new System.Drawing.Size(167, 35);
+            this.DurusEkle_Btn.TabIndex = 19;
+            this.DurusEkle_Btn.Text = "Duruşu Ekle";
+            this.DurusEkle_Btn.UseVisualStyleBackColor = true;
+            this.DurusEkle_Btn.Click += new System.EventHandler(this.DurusEkle_Btn_Click);
+            // 
+            // tabPage42
+            // 
+            this.tabPage42.Controls.Add(this.DurusGuncelle_Btn);
+            this.tabPage42.Location = new System.Drawing.Point(4, 29);
+            this.tabPage42.Name = "tabPage42";
+            this.tabPage42.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage42.Size = new System.Drawing.Size(425, 72);
+            this.tabPage42.TabIndex = 1;
+            this.tabPage42.Text = "Duruş Güncelle";
+            this.tabPage42.UseVisualStyleBackColor = true;
+            // 
+            // DurusGuncelle_Btn
+            // 
+            this.DurusGuncelle_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusGuncelle_Btn.Location = new System.Drawing.Point(128, 18);
+            this.DurusGuncelle_Btn.Name = "DurusGuncelle_Btn";
+            this.DurusGuncelle_Btn.Size = new System.Drawing.Size(167, 35);
+            this.DurusGuncelle_Btn.TabIndex = 20;
+            this.DurusGuncelle_Btn.Text = "Duruşu Güncelle";
+            this.DurusGuncelle_Btn.UseVisualStyleBackColor = true;
+            this.DurusGuncelle_Btn.Click += new System.EventHandler(this.DurusGuncelle_Btn_Click);
+            // 
+            // tabPage43
+            // 
+            this.tabPage43.Controls.Add(this.DurusSil_Btn);
+            this.tabPage43.Location = new System.Drawing.Point(4, 29);
+            this.tabPage43.Name = "tabPage43";
+            this.tabPage43.Size = new System.Drawing.Size(425, 72);
+            this.tabPage43.TabIndex = 2;
+            this.tabPage43.Text = "Duruş Sil";
+            this.tabPage43.UseVisualStyleBackColor = true;
+            // 
+            // DurusSil_Btn
+            // 
+            this.DurusSil_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DurusSil_Btn.Location = new System.Drawing.Point(128, 18);
+            this.DurusSil_Btn.Name = "DurusSil_Btn";
+            this.DurusSil_Btn.Size = new System.Drawing.Size(167, 35);
+            this.DurusSil_Btn.TabIndex = 20;
+            this.DurusSil_Btn.Text = "Duruşu Sil";
+            this.DurusSil_Btn.UseVisualStyleBackColor = true;
+            this.DurusSil_Btn.Click += new System.EventHandler(this.DurusSil_Btn_Click);
+            // 
+            // DurusGrid
+            // 
+            this.DurusGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DurusGrid.Location = new System.Drawing.Point(22, 18);
+            this.DurusGrid.Name = "DurusGrid";
+            this.DurusGrid.Size = new System.Drawing.Size(1307, 378);
+            this.DurusGrid.TabIndex = 16;
+            this.DurusGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DurusGrid_CellClick);
             // 
             // tabPage10
             // 
@@ -1545,10 +1985,112 @@
             this.tabPage10.Controls.Add(this.button6);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage10.Size = new System.Drawing.Size(1352, 729);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Admin Raporu";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // tabControl14
+            // 
+            this.tabControl14.Controls.Add(this.tabPage36);
+            this.tabControl14.Controls.Add(this.tabPage37);
+            this.tabControl14.Controls.Add(this.tabPage38);
+            this.tabControl14.Controls.Add(this.tabPage39);
+            this.tabControl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabControl14.Location = new System.Drawing.Point(474, 15);
+            this.tabControl14.Name = "tabControl14";
+            this.tabControl14.SelectedIndex = 0;
+            this.tabControl14.Size = new System.Drawing.Size(841, 525);
+            this.tabControl14.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl14.TabIndex = 7;
+            this.tabControl14.Visible = false;
+            // 
+            // tabPage36
+            // 
+            this.tabPage36.Location = new System.Drawing.Point(4, 27);
+            this.tabPage36.Name = "tabPage36";
+            this.tabPage36.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage36.Size = new System.Drawing.Size(833, 494);
+            this.tabPage36.TabIndex = 0;
+            this.tabPage36.Text = "En Son Yapılan İşlemler";
+            this.tabPage36.UseVisualStyleBackColor = true;
+            // 
+            // tabPage37
+            // 
+            this.tabPage37.Location = new System.Drawing.Point(4, 27);
+            this.tabPage37.Name = "tabPage37";
+            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage37.Size = new System.Drawing.Size(833, 494);
+            this.tabPage37.TabIndex = 1;
+            this.tabPage37.Text = "Veritabanı Bilgileri";
+            this.tabPage37.UseVisualStyleBackColor = true;
+            // 
+            // tabPage38
+            // 
+            this.tabPage38.Location = new System.Drawing.Point(4, 27);
+            this.tabPage38.Name = "tabPage38";
+            this.tabPage38.Size = new System.Drawing.Size(833, 494);
+            this.tabPage38.TabIndex = 2;
+            this.tabPage38.Text = "SQL Query Çalıştır";
+            this.tabPage38.UseVisualStyleBackColor = true;
+            // 
+            // tabPage39
+            // 
+            this.tabPage39.Location = new System.Drawing.Point(4, 27);
+            this.tabPage39.Name = "tabPage39";
+            this.tabPage39.Size = new System.Drawing.Size(833, 494);
+            this.tabPage39.TabIndex = 3;
+            this.tabPage39.Text = "Personel Kartı Tasarımı";
+            this.tabPage39.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 527);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(446, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Veritabanı kayıtlarına ve önemli bilgilere erişmek için Admin Kullanıcı adı ve şi" +
+    "frenizi girmelisiniz.";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox16.Location = new System.Drawing.Point(88, 159);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(220, 37);
+            this.textBox16.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label13.Location = new System.Drawing.Point(20, 202);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 25);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Şifre:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label11.Location = new System.Drawing.Point(38, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 25);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Ad:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MeshEkran.Properties.Resources.adminicon;
+            this.pictureBox4.Location = new System.Drawing.Point(137, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(122, 110);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // textBox15
             // 
@@ -1571,15 +2113,15 @@
             // 
             // tabPage11
             // 
+            this.tabPage11.BackColor = System.Drawing.Color.Transparent;
             this.tabPage11.Controls.Add(this.tabControl4);
             this.tabPage11.Controls.Add(this.tabControl3);
             this.tabPage11.Controls.Add(this.OperatorlerGrid);
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage11.Size = new System.Drawing.Size(1352, 729);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "Operatör Listesi";
-            this.tabPage11.UseVisualStyleBackColor = true;
             // 
             // tabControl4
             // 
@@ -1672,6 +2214,7 @@
             this.durumcheck.TabIndex = 82;
             this.durumcheck.Text = "İşten Ayrıldı";
             this.durumcheck.UseVisualStyleBackColor = true;
+            this.durumcheck.CheckedChanged += new System.EventHandler(this.Durumcheck_CheckedChanged);
             // 
             // label26
             // 
@@ -1691,6 +2234,7 @@
             this.SOperatorIDBox.ShortcutsEnabled = false;
             this.SOperatorIDBox.Size = new System.Drawing.Size(150, 29);
             this.SOperatorIDBox.TabIndex = 63;
+            this.SOperatorIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SOperatorIDBox_KeyPress);
             // 
             // EAdBox
             // 
@@ -1758,6 +2302,7 @@
             this.ESicilNoBox.ShortcutsEnabled = false;
             this.ESicilNoBox.Size = new System.Drawing.Size(150, 29);
             this.ESicilNoBox.TabIndex = 76;
+            this.ESicilNoBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ESicilNoBox_KeyPress);
             // 
             // EDurumBox
             // 
@@ -1767,6 +2312,7 @@
             this.EDurumBox.ShortcutsEnabled = false;
             this.EDurumBox.Size = new System.Drawing.Size(150, 29);
             this.EDurumBox.TabIndex = 75;
+            this.EDurumBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EDurumBox_KeyPress);
             // 
             // label15
             // 
@@ -1920,7 +2466,7 @@
             // 
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage12.Size = new System.Drawing.Size(1352, 729);
             this.tabPage12.TabIndex = 11;
             this.tabPage12.Text = "Planlama";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -1930,15 +2476,24 @@
             this.tabPage13.Controls.Add(this.button10);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1322, 552);
+            this.tabPage13.Size = new System.Drawing.Size(1352, 729);
             this.tabPage13.TabIndex = 12;
             this.tabPage13.Text = "Veritabanları";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(486, 167);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(13, 636);
+            this.label31.Location = new System.Drawing.Point(9, 873);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(124, 13);
             this.label31.TabIndex = 21;
@@ -1948,7 +2503,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label46.Location = new System.Drawing.Point(1106, 597);
+            this.label46.Location = new System.Drawing.Point(1132, 806);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(56, 16);
             this.label46.TabIndex = 17;
@@ -1958,7 +2513,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label47.Location = new System.Drawing.Point(1176, 597);
+            this.label47.Location = new System.Drawing.Point(1202, 806);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(46, 16);
             this.label47.TabIndex = 19;
@@ -1968,7 +2523,7 @@
             // 
             this.GeriDonButon.BackColor = System.Drawing.Color.Transparent;
             this.GeriDonButon.Image = global::MeshEkran.Properties.Resources.Left_Arrow__512;
-            this.GeriDonButon.Location = new System.Drawing.Point(1228, 616);
+            this.GeriDonButon.Location = new System.Drawing.Point(1254, 825);
             this.GeriDonButon.Name = "GeriDonButon";
             this.GeriDonButon.Size = new System.Drawing.Size(54, 58);
             this.GeriDonButon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1979,7 +2534,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::MeshEkran.Properties.Resources.reload;
-            this.pictureBox5.Location = new System.Drawing.Point(1168, 616);
+            this.pictureBox5.Location = new System.Drawing.Point(1194, 825);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(54, 58);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1991,7 +2546,7 @@
             // 
             this.KapatButon.BackColor = System.Drawing.Color.Transparent;
             this.KapatButon.Image = global::MeshEkran.Properties.Resources.quittt;
-            this.KapatButon.Location = new System.Drawing.Point(1288, 616);
+            this.KapatButon.Location = new System.Drawing.Point(1314, 825);
             this.KapatButon.Name = "KapatButon";
             this.KapatButon.Size = new System.Drawing.Size(54, 58);
             this.KapatButon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2002,18 +2557,19 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::MeshEkran.Properties.Resources.CancelIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(1108, 616);
+            this.pictureBox3.Location = new System.Drawing.Point(1134, 825);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(54, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label48.Location = new System.Drawing.Point(1288, 597);
+            this.label48.Location = new System.Drawing.Point(1314, 806);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(43, 16);
             this.label48.TabIndex = 21;
@@ -2023,295 +2579,17 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label49.Location = new System.Drawing.Point(1234, 597);
+            this.label49.Location = new System.Drawing.Point(1260, 806);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(37, 16);
             this.label49.TabIndex = 22;
             this.label49.Text = "Çıkış";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MeshEkran.Properties.Resources.adminicon;
-            this.pictureBox4.Location = new System.Drawing.Point(137, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(122, 110);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label11.Location = new System.Drawing.Point(38, 159);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 25);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Ad:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label13.Location = new System.Drawing.Point(20, 202);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 25);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Şifre:";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox16.Location = new System.Drawing.Point(88, 159);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(220, 37);
-            this.textBox16.TabIndex = 5;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 527);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(446, 13);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Veritabanı kayıtlarına ve önemli bilgilere erişmek için Admin Kullanıcı adı ve şi" +
-    "frenizi girmelisiniz.";
-            // 
-            // tabControl14
-            // 
-            this.tabControl14.Controls.Add(this.tabPage36);
-            this.tabControl14.Controls.Add(this.tabPage37);
-            this.tabControl14.Controls.Add(this.tabPage38);
-            this.tabControl14.Controls.Add(this.tabPage39);
-            this.tabControl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabControl14.Location = new System.Drawing.Point(474, 15);
-            this.tabControl14.Name = "tabControl14";
-            this.tabControl14.SelectedIndex = 0;
-            this.tabControl14.Size = new System.Drawing.Size(841, 525);
-            this.tabControl14.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl14.TabIndex = 7;
-            this.tabControl14.Visible = false;
-            // 
-            // tabPage36
-            // 
-            this.tabPage36.Location = new System.Drawing.Point(4, 27);
-            this.tabPage36.Name = "tabPage36";
-            this.tabPage36.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage36.Size = new System.Drawing.Size(833, 494);
-            this.tabPage36.TabIndex = 0;
-            this.tabPage36.Text = "En Son Yapılan İşlemler";
-            this.tabPage36.UseVisualStyleBackColor = true;
-            // 
-            // tabPage37
-            // 
-            this.tabPage37.Location = new System.Drawing.Point(4, 27);
-            this.tabPage37.Name = "tabPage37";
-            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage37.Size = new System.Drawing.Size(779, 494);
-            this.tabPage37.TabIndex = 1;
-            this.tabPage37.Text = "Veritabanı Bilgileri";
-            this.tabPage37.UseVisualStyleBackColor = true;
-            // 
-            // tabPage38
-            // 
-            this.tabPage38.Location = new System.Drawing.Point(4, 27);
-            this.tabPage38.Name = "tabPage38";
-            this.tabPage38.Size = new System.Drawing.Size(779, 494);
-            this.tabPage38.TabIndex = 2;
-            this.tabPage38.Text = "SQL Query Çalıştır";
-            this.tabPage38.UseVisualStyleBackColor = true;
-            // 
-            // tabPage39
-            // 
-            this.tabPage39.Location = new System.Drawing.Point(4, 27);
-            this.tabPage39.Name = "tabPage39";
-            this.tabPage39.Size = new System.Drawing.Size(779, 494);
-            this.tabPage39.TabIndex = 3;
-            this.tabPage39.Text = "Personel Kartı Tasarımı";
-            this.tabPage39.UseVisualStyleBackColor = true;
-            // 
-            // tabControl15
-            // 
-            this.tabControl15.Controls.Add(this.tabPage40);
-            this.tabControl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabControl15.Location = new System.Drawing.Point(412, 160);
-            this.tabControl15.Name = "tabControl15";
-            this.tabControl15.SelectedIndex = 0;
-            this.tabControl15.Size = new System.Drawing.Size(429, 377);
-            this.tabControl15.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl15.TabIndex = 18;
-            // 
-            // tabPage40
-            // 
-            this.tabPage40.Controls.Add(this.richTextBox1);
-            this.tabPage40.Controls.Add(this.textBox18);
-            this.tabPage40.Controls.Add(this.textBox19);
-            this.tabPage40.Controls.Add(this.label28);
-            this.tabPage40.Controls.Add(this.label54);
-            this.tabPage40.Controls.Add(this.label55);
-            this.tabPage40.Location = new System.Drawing.Point(4, 29);
-            this.tabPage40.Name = "tabPage40";
-            this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage40.Size = new System.Drawing.Size(421, 344);
-            this.tabPage40.TabIndex = 0;
-            this.tabPage40.Text = "Duruş Bilgileri";
-            this.tabPage40.UseVisualStyleBackColor = true;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox18.Location = new System.Drawing.Point(133, 33);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(261, 34);
-            this.textBox18.TabIndex = 2;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox19.Location = new System.Drawing.Point(133, 73);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(261, 34);
-            this.textBox19.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label28.Location = new System.Drawing.Point(3, 113);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(124, 20);
-            this.label28.TabIndex = 10;
-            this.label28.Text = "Duruş Açıklama:";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label54.Location = new System.Drawing.Point(44, 73);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(83, 20);
-            this.label54.TabIndex = 9;
-            this.label54.Text = "Duruş AD:";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label55.Location = new System.Drawing.Point(50, 33);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(77, 20);
-            this.label55.TabIndex = 8;
-            this.label55.Text = "Duruş ID:";
-            // 
-            // tabControl16
-            // 
-            this.tabControl16.Controls.Add(this.tabPage41);
-            this.tabControl16.Controls.Add(this.tabPage42);
-            this.tabControl16.Controls.Add(this.tabPage43);
-            this.tabControl16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabControl16.Location = new System.Drawing.Point(408, 49);
-            this.tabControl16.Name = "tabControl16";
-            this.tabControl16.SelectedIndex = 0;
-            this.tabControl16.Size = new System.Drawing.Size(433, 105);
-            this.tabControl16.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl16.TabIndex = 17;
-            // 
-            // tabPage41
-            // 
-            this.tabPage41.Controls.Add(this.button7);
-            this.tabPage41.Location = new System.Drawing.Point(4, 29);
-            this.tabPage41.Name = "tabPage41";
-            this.tabPage41.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage41.Size = new System.Drawing.Size(425, 72);
-            this.tabPage41.TabIndex = 0;
-            this.tabPage41.Text = "Duruş Ekle";
-            this.tabPage41.UseVisualStyleBackColor = true;
-            // 
-            // tabPage42
-            // 
-            this.tabPage42.Controls.Add(this.button8);
-            this.tabPage42.Location = new System.Drawing.Point(4, 29);
-            this.tabPage42.Name = "tabPage42";
-            this.tabPage42.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage42.Size = new System.Drawing.Size(425, 72);
-            this.tabPage42.TabIndex = 1;
-            this.tabPage42.Text = "Duruş Güncelle";
-            this.tabPage42.UseVisualStyleBackColor = true;
-            // 
-            // tabPage43
-            // 
-            this.tabPage43.Controls.Add(this.button9);
-            this.tabPage43.Location = new System.Drawing.Point(4, 29);
-            this.tabPage43.Name = "tabPage43";
-            this.tabPage43.Size = new System.Drawing.Size(425, 72);
-            this.tabPage43.TabIndex = 2;
-            this.tabPage43.Text = "Duruş Sil";
-            this.tabPage43.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(22, 18);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(366, 519);
-            this.dataGridView6.TabIndex = 16;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(133, 113);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(261, 214);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.Location = new System.Drawing.Point(128, 18);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(167, 35);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Duruşu Ekle";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.Location = new System.Drawing.Point(128, 18);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 35);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Duruşu Güncelle";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button9.Location = new System.Drawing.Point(128, 18);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(167, 35);
-            this.button9.TabIndex = 20;
-            this.button9.Text = "Duruşu Sil";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(486, 167);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.Button10_Click);
-            // 
             // Admin_AnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 675);
+            this.ClientSize = new System.Drawing.Size(1396, 895);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label48);
@@ -2340,9 +2618,10 @@
             this.tabControl13.ResumeLayout(false);
             this.tabPage35.ResumeLayout(false);
             this.tabPage35.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tabControl2.ResumeLayout(false);
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OperasyonGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MakineGrid)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -2379,9 +2658,28 @@
             this.tabControl12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.tabControl17.ResumeLayout(false);
+            this.tabPage44.ResumeLayout(false);
+            this.tabPage44.PerformLayout();
+            this.tabControl18.ResumeLayout(false);
+            this.tabPage45.ResumeLayout(false);
+            this.tabPage46.ResumeLayout(false);
+            this.tabPage47.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OperasyonlarMainGrid)).EndInit();
             this.tabPage9.ResumeLayout(false);
+            this.tabControl15.ResumeLayout(false);
+            this.tabPage40.ResumeLayout(false);
+            this.tabPage40.PerformLayout();
+            this.DurusTab.ResumeLayout(false);
+            this.tabPage41.ResumeLayout(false);
+            this.tabPage42.ResumeLayout(false);
+            this.tabPage43.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DurusGrid)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            this.tabControl14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage11.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage19.ResumeLayout(false);
@@ -2398,16 +2696,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.tabControl14.ResumeLayout(false);
-            this.tabControl15.ResumeLayout(false);
-            this.tabPage40.ResumeLayout(false);
-            this.tabPage40.PerformLayout();
-            this.tabControl16.ResumeLayout(false);
-            this.tabPage41.ResumeLayout(false);
-            this.tabPage42.ResumeLayout(false);
-            this.tabPage43.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2571,9 +2859,7 @@
         private System.Windows.Forms.TextBox MakineAdiBox;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox MakineKoduBox;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TextBox textBox15;
@@ -2590,20 +2876,39 @@
         private System.Windows.Forms.TabPage tabPage39;
         private System.Windows.Forms.TabControl tabControl15;
         private System.Windows.Forms.TabPage tabPage40;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.RichTextBox DurusAciklamaBox;
+        private System.Windows.Forms.TextBox DurusIDBox;
+        private System.Windows.Forms.TextBox DurusAdBox;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TabControl tabControl16;
+        private System.Windows.Forms.TabControl DurusTab;
         private System.Windows.Forms.TabPage tabPage41;
         private System.Windows.Forms.TabPage tabPage42;
         private System.Windows.Forms.TabPage tabPage43;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DataGridView DurusGrid;
+        private System.Windows.Forms.Button DurusEkle_Btn;
+        private System.Windows.Forms.Button DurusGuncelle_Btn;
+        private System.Windows.Forms.Button DurusSil_Btn;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button MakineEkleBtn;
+        private System.Windows.Forms.Button MakineSilBtn;
+        private System.Windows.Forms.Button MakineGuncelleBtn;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TabControl tabControl17;
+        private System.Windows.Forms.TabPage tabPage44;
+        private System.Windows.Forms.TextBox OperasyonIDMainBox;
+        private System.Windows.Forms.TextBox OperasyonAdiMainBox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TabControl tabControl18;
+        private System.Windows.Forms.TabPage tabPage45;
+        private System.Windows.Forms.Button OpMainEkle_Btn;
+        private System.Windows.Forms.TabPage tabPage46;
+        private System.Windows.Forms.Button OpMainSil_Btn;
+        private System.Windows.Forms.TabPage tabPage47;
+        private System.Windows.Forms.Button OpMainGuncelle_Btn;
+        private System.Windows.Forms.DataGridView OperasyonlarMainGrid;
     }
 }
