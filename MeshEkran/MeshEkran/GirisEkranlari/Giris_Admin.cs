@@ -33,7 +33,7 @@ namespace MeshEkran
         public KullaniciDLL.Admin adminkullanicisi;
         public AdminGiris islem;
 
-
+        #region GirişYap-Buton-Click-Event
         private void GirisYapButon_Click(object sender, EventArgs e)
         {
 
@@ -71,33 +71,6 @@ namespace MeshEkran
 
 
         }
-
-        /*private void Button1_Click(object sender, EventArgs e)
-        {
-            
-            Metotlar.Ok("Naber", "İstenirse Title yazılır");
-            Metotlar.Ok("Naber 2");
-            Metotlar.No("başarısız mesaj");
-            Metotlar.No("başarısız mesaj", "ekstra title");
-
-
-            DialogResult sonuc = Metotlar.QuestionMesaj("Emin misin Reis ?", "iyi kaRAR ver");
-
-            if (sonuc == DialogResult.OK)
-            {
-                Metotlar.Ok("emin mişsin");
-            }
-            else
-            if (sonuc == DialogResult.No)
-            {
-                Metotlar.No("Emin değilmişsin, no ya bastın.");
-            }
-            else
-            if (sonuc == DialogResult.Cancel)
-            {
-                Metotlar.No("İşlem kullanıcı tarafından iptal edildi.","İŞLEM İPTAL");
-            }
-
-        } */
+        #endregion
     }
 }

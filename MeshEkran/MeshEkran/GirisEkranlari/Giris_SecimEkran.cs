@@ -122,7 +122,13 @@ namespace MeshEkran
             if(Kontrol == true)
             {
                 MessageBox.Show("Operatör Ekranına yönlendiriliyorsunuz...");
-
+                //Admin_AnaMenu ac = new Admin_AnaMenu();
+                Giris_Operator ac = new Giris_Operator
+                {
+                    StartPosition = FormStartPosition.CenterScreen
+                };
+                ac.Show();
+                this.Hide();
             }
             else
             {
