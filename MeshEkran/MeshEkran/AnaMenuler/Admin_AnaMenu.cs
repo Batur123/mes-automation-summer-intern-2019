@@ -27,6 +27,7 @@ namespace MeshEkran
             OperasyonlarGrid();
             UrunlerListesiGrid();
             DurusListesiGrid();
+            AliciGridleri();
            
             UrunIDBox.Enabled = false;
             SOperatorIDBox.Enabled = false;
@@ -252,6 +253,42 @@ namespace MeshEkran
                     DurusGrid.Columns[0].Width = 120;
                     DurusGrid.Columns[1].Width = 250;
                     DurusGrid.Columns[2].Width = 1000;
+
+                }
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show("Veritabanı bağlantınız kurulamadı veya sistemde teknik bir hata oluştu. Lütfen programı kapatıp açınız." + "\n" + msg);
+            }
+        }
+        #endregion
+
+        #region Alıcı Listesi Grid Doldurma
+        private void AliciGridleri()
+        {
+
+            try
+            {
+                using (var connection = Veritabani.Database.GetConnection())
+                {
+
+                    var select = "exec PRC_AliciSelect";
+                    var dataAdapter = new SqlDataAdapter(select, connection);
+                    var commandBuilder = new SqlCommandBuilder(dataAdapter);
+                    var ds = new DataSet();
+
+                    dataAdapter.Fill(ds);
+                    datagridview32.ReadOnly = true;
+                    datagridview32.DataSource = ds.Tables[0];
+
+                    datagridview32.RowHeadersVisible = false;
+                    datagridview32.Columns[0].HeaderCell.Value = "Alıcı ID";
+                    datagridview32.Columns[1].HeaderCell.Value = "Alıcı Adı";
+                    datagridview32.Columns[2].HeaderCell.Value = "Alıcı Şirket Numarası";
+
+                    datagridview32.Columns[0].Width = 120;
+                    datagridview32.Columns[1].Width = 144;
+                    datagridview32.Columns[2].Width = 200;
 
                 }
             }
@@ -1466,6 +1503,7 @@ namespace MeshEkran
             UrunlerListesiGrid();
             OperasyonlarGrid();
             DurusListesiGrid();
+            AliciGridleri();
         }
         #endregion
 
@@ -1481,9 +1519,125 @@ namespace MeshEkran
 
 
 
+
         #endregion
 
+        #region Alıcı Ekleme - Buton
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (AliciAdBox.Text == "" || AliciNoBox.Text == "")
+                {
+                    MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                }
+                else
+                {
 
+                    Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        AliciAD = AliciAdBox.Text,
+                        AliciSirketNo = Convert.ToInt32(AliciNoBox.Text)
+
+                    };
+
+
+                    if (islem.AliciEkle(giris))
+                    {
+                        MessageBox.Show("Alıcı ekleme işlemi başarıyla tamamlandı.");
+                        AliciGridleri();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu koda ait bir alıcı zaten mevcuttur. Ekleme işlemi yapılamadı.");
+                    }
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+        #endregion
+
+        #region Alıcı Güncelleme - Buton
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (OperasyonIDMainBox.Text == "" || OperasyonAdiMainBox.Text == "")
+                {
+                    MessageBox.Show("Lütfen boş kısım bırakmayınız.");
+                }
+                else
+                {
+
+                    Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        OperasyonAdi = OperasyonAdiMainBox.Text,
+                        OperasyonID = Convert.ToInt32(OperasyonIDMainBox.Text),
+
+                    };
+
+                    if (islem.OperasyonGuncelleme(giris))
+                    {
+                        MessageBox.Show("Alıcı bilgileri güncelleme işlemi başarıyla yapıldı.");
+                        OperasyonlarGrid();
+                    }
+                }
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+
+        #endregion
+
+        #region Alıcı Silme - Buton
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DurusIDBox.Text == "")
+                {
+                    MessageBox.Show("Lütfen Alıcı ID isimli kutucuğu boş bırakmayınız.");
+                }
+                else
+                {
+
+                    Classlar.SQLIslemleri islem = new Classlar.SQLIslemleri();
+                    MasDLL.Rapor giris = new MasDLL.Rapor
+                    {
+                        DurusID = Convert.ToInt32(DurusIDBox.Text)
+                    };
+
+
+
+                    if (islem.DurusSil(giris))
+                    {
+                        MessageBox.Show("Alıcı silme işlemi başarıyla tamamlandı.");
+                        DurusListesiGrid();
+                    }
+
+                }
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Bir hata oluştu. \n");
+                MessageBox.Show(hata.Message);
+            }
+        }
+
+        #endregion
+
+        
     }
 }
 

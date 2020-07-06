@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_AnaMenu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
@@ -86,10 +86,10 @@
             this.tabControl10 = new System.Windows.Forms.TabControl();
             this.tabPage30 = new System.Windows.Forms.TabPage();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.AliciIDBox = new System.Windows.Forms.TextBox();
+            this.AliciNoBox = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.AliciAdBox = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.tabControl9 = new System.Windows.Forms.TabControl();
             this.tabPage27 = new System.Windows.Forms.TabPage();
@@ -98,8 +98,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage29 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl7 = new System.Windows.Forms.TabControl();
             this.tabPage25 = new System.Windows.Forms.TabPage();
@@ -240,6 +238,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.datagridview32 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -265,7 +264,6 @@
             this.tabPage27.SuspendLayout();
             this.tabPage28.SuspendLayout();
             this.tabPage29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabControl7.SuspendLayout();
             this.tabPage25.SuspendLayout();
@@ -320,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview32)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -866,10 +865,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.datagridview32);
             this.tabPage4.Controls.Add(this.tabControl10);
             this.tabPage4.Controls.Add(this.tabControl9);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1352, 729);
@@ -891,46 +889,46 @@
             // tabPage30
             // 
             this.tabPage30.Controls.Add(this.label39);
-            this.tabPage30.Controls.Add(this.textBox8);
-            this.tabPage30.Controls.Add(this.textBox7);
+            this.tabPage30.Controls.Add(this.AliciIDBox);
+            this.tabPage30.Controls.Add(this.AliciNoBox);
             this.tabPage30.Controls.Add(this.label38);
-            this.tabPage30.Controls.Add(this.textBox6);
+            this.tabPage30.Controls.Add(this.AliciAdBox);
             this.tabPage30.Controls.Add(this.label37);
             this.tabPage30.Location = new System.Drawing.Point(4, 29);
             this.tabPage30.Name = "tabPage30";
             this.tabPage30.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage30.Size = new System.Drawing.Size(305, 142);
             this.tabPage30.TabIndex = 0;
-            this.tabPage30.Text = "Müşteri Bilgileri";
+            this.tabPage30.Text = "Alıcı Bilgileri";
             this.tabPage30.UseVisualStyleBackColor = true;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label39.Location = new System.Drawing.Point(35, 22);
+            this.label39.Location = new System.Drawing.Point(46, 22);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(79, 18);
+            this.label39.Size = new System.Drawing.Size(56, 18);
             this.label39.TabIndex = 10;
-            this.label39.Text = "Müşteri ID:";
+            this.label39.Text = "Alıcı ID:";
             // 
-            // textBox8
+            // AliciIDBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(120, 22);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(152, 31);
-            this.textBox8.TabIndex = 9;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox8_KeyPress_1);
+            this.AliciIDBox.Location = new System.Drawing.Point(120, 22);
+            this.AliciIDBox.Multiline = true;
+            this.AliciIDBox.Name = "AliciIDBox";
+            this.AliciIDBox.Size = new System.Drawing.Size(152, 31);
+            this.AliciIDBox.TabIndex = 9;
+            this.AliciIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox8_KeyPress_1);
             // 
-            // textBox7
+            // AliciNoBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 96);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(152, 30);
-            this.textBox7.TabIndex = 5;
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox7_KeyPress_1);
+            this.AliciNoBox.Location = new System.Drawing.Point(120, 96);
+            this.AliciNoBox.Multiline = true;
+            this.AliciNoBox.Name = "AliciNoBox";
+            this.AliciNoBox.Size = new System.Drawing.Size(152, 30);
+            this.AliciNoBox.TabIndex = 5;
+            this.AliciNoBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox7_KeyPress_1);
             // 
             // label38
             // 
@@ -938,27 +936,27 @@
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label38.Location = new System.Drawing.Point(40, 96);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(74, 18);
+            this.label38.Size = new System.Drawing.Size(62, 18);
             this.label38.TabIndex = 7;
-            this.label38.Text = "Şirket No:";
+            this.label38.Text = "Alıcı No:";
             // 
-            // textBox6
+            // AliciAdBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 59);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(152, 31);
-            this.textBox6.TabIndex = 4;
+            this.AliciAdBox.Location = new System.Drawing.Point(120, 59);
+            this.AliciAdBox.Multiline = true;
+            this.AliciAdBox.Name = "AliciAdBox";
+            this.AliciAdBox.Size = new System.Drawing.Size(152, 31);
+            this.AliciAdBox.TabIndex = 4;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label37.Location = new System.Drawing.Point(29, 59);
+            this.label37.Location = new System.Drawing.Point(40, 59);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(85, 18);
+            this.label37.Size = new System.Drawing.Size(62, 18);
             this.label37.TabIndex = 6;
-            this.label37.Text = "Müşteri Adı:";
+            this.label37.Text = "Alıcı Adı:";
             // 
             // tabControl9
             // 
@@ -981,7 +979,7 @@
             this.tabPage27.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage27.Size = new System.Drawing.Size(313, 62);
             this.tabPage27.TabIndex = 0;
-            this.tabPage27.Text = "Müşteri Ekle";
+            this.tabPage27.Text = "Alıcı Ekle";
             this.tabPage27.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -991,8 +989,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 50);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Müşteri Ekle";
+            this.button3.Text = "Ekle";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage28
             // 
@@ -1002,7 +1001,7 @@
             this.tabPage28.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage28.Size = new System.Drawing.Size(313, 62);
             this.tabPage28.TabIndex = 1;
-            this.tabPage28.Text = "Müşteri Güncelle";
+            this.tabPage28.Text = "Alıcıyı Güncelle";
             this.tabPage28.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -1012,8 +1011,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 50);
             this.button4.TabIndex = 17;
-            this.button4.Text = "Müşteri Güncelle";
+            this.button4.Text = "Güncelle";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // tabPage29
             // 
@@ -1022,7 +1022,7 @@
             this.tabPage29.Name = "tabPage29";
             this.tabPage29.Size = new System.Drawing.Size(313, 62);
             this.tabPage29.TabIndex = 2;
-            this.tabPage29.Text = "Müşteri Sil";
+            this.tabPage29.Text = "Alıcıyı Sil";
             this.tabPage29.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -1032,26 +1032,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(170, 50);
             this.button5.TabIndex = 17;
-            this.button5.Text = "Müşteri Sil";
+            this.button5.Text = "Sil";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(484, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(309, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Siparişleri Göster";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(16, 20);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(440, 695);
-            this.dataGridView3.TabIndex = 0;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabPage5
             // 
@@ -1754,36 +1737,36 @@
             this.OperasyonlarMainGrid.AllowUserToResizeRows = false;
             this.OperasyonlarMainGrid.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.OperasyonlarMainGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OperasyonlarMainGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OperasyonlarMainGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.OperasyonlarMainGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OperasyonlarMainGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OperasyonlarMainGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.OperasyonlarMainGrid.Location = new System.Drawing.Point(203, 22);
             this.OperasyonlarMainGrid.Name = "OperasyonlarMainGrid";
             this.OperasyonlarMainGrid.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OperasyonlarMainGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.OperasyonlarMainGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OperasyonlarMainGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.OperasyonlarMainGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.OperasyonlarMainGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OperasyonlarMainGrid.Size = new System.Drawing.Size(969, 347);
             this.OperasyonlarMainGrid.TabIndex = 26;
@@ -2585,6 +2568,14 @@
             this.label49.TabIndex = 22;
             this.label49.Text = "Çıkış";
             // 
+            // datagridview32
+            // 
+            this.datagridview32.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridview32.Location = new System.Drawing.Point(15, 20);
+            this.datagridview32.Name = "datagridview32";
+            this.datagridview32.Size = new System.Drawing.Size(455, 539);
+            this.datagridview32.TabIndex = 9;
+            // 
             // Admin_AnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2632,7 +2623,6 @@
             this.tabPage27.ResumeLayout(false);
             this.tabPage28.ResumeLayout(false);
             this.tabPage29.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabControl7.ResumeLayout(false);
             this.tabPage25.ResumeLayout(false);
@@ -2696,6 +2686,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview32)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2812,16 +2803,15 @@
         private System.Windows.Forms.TabPage tabPage27;
         private System.Windows.Forms.TabPage tabPage28;
         private System.Windows.Forms.TabPage tabPage29;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView AliciGrid2;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TabControl tabControl10;
         private System.Windows.Forms.TabPage tabPage30;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox AliciIDBox;
+        private System.Windows.Forms.TextBox AliciNoBox;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox AliciAdBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TabControl tabControl11;
         private System.Windows.Forms.TabPage tabPage31;
@@ -2910,5 +2900,6 @@
         private System.Windows.Forms.TabPage tabPage47;
         private System.Windows.Forms.Button OpMainGuncelle_Btn;
         private System.Windows.Forms.DataGridView OperasyonlarMainGrid;
+        private System.Windows.Forms.DataGridView datagridview32;
     }
 }

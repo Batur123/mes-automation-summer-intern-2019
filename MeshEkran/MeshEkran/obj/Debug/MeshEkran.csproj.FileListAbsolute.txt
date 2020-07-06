@@ -12,3 +12,17 @@ C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\De
 C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CopyComplete
 C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Admin_AnaMenu.resources
 C:\Users\badgo\Desktop\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Operator.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe.config
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MeshEkran.pdb
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\bin\Debug\MasDLL.dll
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csprojAssemblyReference.cache
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Admin_AnaMenu.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Admin.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Operator.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_SecimEkran.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Properties.Resources.resources
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.GenerateResource.cache
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CopyComplete
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.exe
+D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.pdb

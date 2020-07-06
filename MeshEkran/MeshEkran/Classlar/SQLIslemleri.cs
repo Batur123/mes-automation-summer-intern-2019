@@ -828,6 +828,167 @@ namespace MeshEkran.Classlar
             }
         }
         #endregion
-        //Duruş İşlemler,
+        //Duruş İşlemleri
+
+        //Alıcı İşlemleri
+        #region AlıcıVarmıKontrolü
+        private bool AliciVarsa(MasDLL.Rapor degisken)
+        {
+
+            bool result = false;
+            using (var baglanti = Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "exec PRC_AliciInsertSelect @aliciid";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@aliciid", degisken.AliciID);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    result = true;
+                    baglanti.Close();
+                }
+                return result;
+
+            }
+
+        }
+        #endregion
+
+        #region AlıcıEkle
+        public bool AliciEkle(MasDLL.Rapor degisken)
+        {
+            bool result = false;
+            if (!AliciVarsa(degisken))
+            {
+                using (var baglanti = Veritabani.Database.GetConnection())
+                {
+                    try
+                    {
+
+
+                        string kayit = "insert into AliciTablosu(AliciAD,AliciSirketNo) values (@aliciad,@alicisirketno)";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@aliciad", degisken.AliciAD);
+                        komut.Parameters.AddWithValue("@alicisirketno", degisken.AliciSirketNo);
+
+
+                        baglanti.Open();
+                        if (komut.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+                        baglanti.Close();
+
+                    }
+                    catch (Exception hata)
+                    {
+                        MessageBox.Show("İşlem Sırasında Hata Oluştu. \n\n\n\n" + hata.Message);
+                    }
+
+                    return result;
+                }
+            }
+            return result;
+        }
+        #endregion
+
+        #region AlıcıGüncelle
+        public bool AliciGuncelle(MasDLL.Rapor degisken)
+        {
+            bool result = false;
+            using (var baglanti = Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "SELECT * from AliciTablosu where AliciID=@aliciid";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@aliciid", degisken.AliciID);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["AliciID"].ToString();
+                    string aliciad = dr["AliciAD"].ToString();
+                    string alicisno = dr["AliciSirketNO"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + aliciad + " isimli alıcıyı güncellemek istediğinize emin misiniz?", "Güncelleme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+
+                        string kayit = "UPDATE AliciTablosu SET AliciAD=@aliciad,AliciSirketNO=@alicisno where AliciID=@alicid";
+                        SqlCommand komut = new SqlCommand(kayit, baglanti);
+                        komut.Parameters.AddWithValue("@aliciad", degisken.AliciAD);
+                        komut.Parameters.AddWithValue("@alicisno", degisken.AliciSirketNo);
+                        komut.Parameters.AddWithValue("@alicid", degisken.AliciID);
+
+                        komut.ExecuteNonQuery();
+
+                        MessageBox.Show("Alıcının bilgileri başarıyla güncellendi.");
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir alıcı bulunamadı.");
+                }
+
+                return result;
+            }
+        }
+        #endregion
+
+        #region AlıcıSil
+        public bool AliciSil(MasDLL.Rapor degisken)
+        {
+            bool result = false;
+            using (var baglanti = Veritabani.Database.GetConnection())
+            {
+                baglanti.Open();
+                string secmeSorgusu = "exec PRC_AliciDelete @aliciid";
+                SqlCommand secmeKomutu = new SqlCommand(secmeSorgusu, baglanti);
+                secmeKomutu.Parameters.AddWithValue("@aliciid", degisken.AliciID);
+                SqlDataAdapter da = new SqlDataAdapter(secmeKomutu);
+                SqlDataReader dr = secmeKomutu.ExecuteReader();
+                if (dr.Read())
+                {
+                    string id = dr["AliciID"].ToString();
+                    string opad = dr["AliciAd"].ToString();
+
+                    dr.Close();
+                    DialogResult durum = MessageBox.Show(id + " numaralı " + opad + " isimli alıcıyı veritabanından silmek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo);
+                    if (DialogResult.Yes == durum)
+                    {
+                        string silmeSorgusu = "DELETE from AliciTablosu where AliciID=@aliciid";
+                        SqlCommand silKomutu = new SqlCommand(silmeSorgusu, baglanti);
+                        silKomutu.Parameters.AddWithValue("@aliciid", degisken.AliciID);
+                        if (silKomutu.ExecuteNonQuery() != -1)
+                        {
+                            result = true;
+                        }
+
+
+                    }
+
+                    baglanti.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir alıcı bulunamadı. Silme işlemi tamamlanamadı.");
+                }
+
+                return result;
+            }
+        }
+        #endregion
+
+        //Alıcı İşlemleri
     }
 }
