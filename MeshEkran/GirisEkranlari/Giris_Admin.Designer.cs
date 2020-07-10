@@ -157,6 +157,7 @@
             this.Controls.Add(this.GirisYapButon);
             this.Name = "Giris_Admin";
             this.Text = "MAS Admin Paneli";
+            this.Load += new System.EventHandler(this.Giris_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GeriDonButon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KapatButon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

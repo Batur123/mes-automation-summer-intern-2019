@@ -55,6 +55,7 @@ namespace MeshEkran
                         a.StartPosition = FormStartPosition.CenterScreen;
                         a.Show();
                         this.Hide();
+                        Dispose();
                     }
                     else
                     {
@@ -72,5 +73,10 @@ namespace MeshEkran
 
         }
         #endregion
+
+        private void Giris_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
