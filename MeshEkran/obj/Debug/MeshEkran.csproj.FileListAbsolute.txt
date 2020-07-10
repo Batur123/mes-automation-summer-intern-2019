@@ -26,16 +26,3 @@ D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkra
 D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CopyComplete
 D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.exe
 D:\Batu\Batu - Bilgisayar Mühendisliği\Yazılım Stajı - Temmuz 2019\MeshEkran\MeshEkran\obj\Debug\MeshEkran.pdb
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe.config
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\bin\Debug\MeshEkran.exe
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\bin\Debug\MeshEkran.pdb
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csprojAssemblyReference.cache
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Admin_AnaMenu.resources
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Admin.resources
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_Operator.resources
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Giris_SecimEkran.resources
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.Properties.Resources.resources
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.GenerateResource.cache
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.csproj.CopyComplete
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.exe
-C:\Users\badgo\Documents\GitHub\Manufacturing-Execution-System--MES--Automation\MeshEkran\MeshEkran\obj\Debug\MeshEkran.pdb

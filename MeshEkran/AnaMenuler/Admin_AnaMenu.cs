@@ -347,8 +347,6 @@ namespace MeshEkran
                 MessageBox.Show("Bir hata oluştu. \n");
                 MessageBox.Show(hata.Message);
             }
-
-           
         }
         #endregion
 
@@ -532,7 +530,6 @@ namespace MeshEkran
                 MessageBox.Show(hata.Message);
             }
 
-            Dispose(true);
 
         }
         #endregion
