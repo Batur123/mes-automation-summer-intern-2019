@@ -1,8 +1,8 @@
-# Manufacturing Execution System (MES) Automation
+# Manufacturing Execution System (MES) Automation\
 
-Open a pull-request for english translation.
+Open a pull-request for english translation.\
 
-[MAS DLL Files](https://github.com/Batur123/Manufacturing-Execution-System-DLL-Extensions)
+[MAS DLL Files](https://github.com/Batur123/Manufacturing-Execution-System-DLL-Extensions) \
 [Database Files](https://github.com/Batur123/Manufacturing-Execution-System-Full-Database)
 
 This is the Manufacturing Execution System without Sensors. You can add/update/delete for Operators who are employees of the Factory. You can also add/update/delete customers,machines on factory. 
