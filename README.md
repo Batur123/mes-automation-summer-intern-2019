@@ -1,6 +1,6 @@
 # Manufacturing Execution System (MES) Automation (2019) <br>
 
-### In this software, you can manage the products, machines, employees, processes in the factory. This MAS automation, working like an ERP system, was developed in C # using MSSQL.
+### In this software, you can manage the products, machines, employees, processes in the factory. This MAS automation, working like an ERP system, was developed in C# using MSSQL.
 
 EN: Open a pull-request for english translation.\
 ZH: 打开拉取请求以进行翻译。
