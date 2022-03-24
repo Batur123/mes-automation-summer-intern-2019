@@ -1,6 +1,7 @@
 # Manufacturing Execution System (MES) Automation (2019)
 
-Open a pull-request for english translation.\
+EN: Open a pull-request for english translation.\
+ZH: 打开拉取请求以进行翻译。
 
 [MAS DLL Files](https://github.com/Batur123/Manufacturing-Execution-System-DLL-Extensions) \
 [Database Files](https://github.com/Batur123/Manufacturing-Execution-System-Full-Database)
